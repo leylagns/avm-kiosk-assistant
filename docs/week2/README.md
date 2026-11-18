@@ -8,6 +8,6 @@
 | [data-dictionary.md](data-dictionary.md) | Veri sözlüğü |
 | [tech-stack.md](tech-stack.md) | Teknoloji yığını tablosu |
 
-**Not:** Figma dosyasının kendisi (tıklanabilir prototip) elle hazırlanmalıdır. Aşağıdaki ekran tarifleri Figma'da birebir çizilecek şekilde yazıldı; prototip bağlantısını buraya ekle.
+**Figma tasarımı hazır:** 6 ekranlık tıklanabilir prototip Figma'da çizildi. Ekran görüntüleri ve akış açıklaması: [design/README.md](design/README.md). Aşağıdaki ekran tarifleri tasarımın yazılı karşılığıdır.
 
-Figma bağlantısı: _(buraya eklenecek)_
+Figma bağlantısı: https://www.figma.com/design/l62Wlur5iwBOSl0ak7DEWj
