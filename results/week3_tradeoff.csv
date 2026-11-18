@@ -1,0 +1,5 @@
+,Parametre (M),Eğitim (sn),p95 gecikme (ms),Makro-F1 test_hard,Makro-F1 test_llm
+E0 Kural,0.0,0.0,22.362,0.688,0.866
+E1 TF-IDF+LR,0.03,9.223,12.613,0.673,0.717
+E2a DistilBERTurk,136.233,57.075,18.645,0.67,0.77
+E2b BERTurk,221.29,104.735,23.641,0.816,0.882

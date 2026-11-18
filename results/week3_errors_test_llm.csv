@@ -1,0 +1,98 @@
+text,intent,entity_value,E0 niyet,E0 varlık,E0 ok,E1 niyet,E1 varlık,E1 ok,E2a niyet,E2a varlık,E2a ok,E2b niyet,E2b varlık,E2b ok,kaç model doğru
+Kebap Sarayı'na gitmem lazım,find_store,S17,find_store,S17,True,find_store,S17,True,find_store,S26,False,find_store,S24,False,2
+pizza fırını hangi tarafta,find_store,S19,find_store,S19,True,find_store,S19,True,find_store,S02,False,find_store,S19,True,3
+Burger Hane'ye nasıl giderim,find_store,S20,find_store,S20,True,find_store,S20,True,recommend_category,kozmetik,False,find_store,S21,False,2
+arkadaşlar Zaman Saat'in önünde bekliyor ben nerden gideyim,find_store,S29,find_store,S29,True,find_store,S29,True,find_store,S15,False,find_store,S29,True,3
+Mavi Eczane'nin yeri neresiydi,find_store,S35,find_store,S35,True,find_store,S35,True,recommend_category,kozmetik,False,find_store,S35,True,3
+oyuncak adasına çocukla gideceğiz yolu tarif eder misiniz,find_store,S26,find_store,S26,True,find_store,S26,True,find_store,S15,False,find_store,S26,True,3
+sayfa kitabevini bulamıyorum,find_store,S15,find_store,S15,True,find_store,S15,True,find_store,S15,True,find_store,S15,True,4
+Telefon Dünyası bu avmde mi,find_store,S12,find_store,S12,True,out_of_scope,,False,find_facility,tuvalet,False,find_store,S10,False,1
+Yıldız Sinema'ya bilet almaya gidiyorum,find_store,S32,find_store,S32,True,find_store,S32,True,recommend_category,kozmetik,False,find_store,S35,False,2
+moda sokağı butiğine uğrayacaktım,find_store,S01,find_store,S01,True,out_of_scope,,False,find_store,S15,False,find_store,S08,False,1
+Lahmacun Evi'nde buluşacağız yönlendirir misiniz,find_store,S18,find_store,S18,True,find_store,S18,True,find_store,S15,False,find_store,S21,False,2
+Şehir Market'e ineceğim kaçıncı katta,find_store,S25,find_store,S25,True,floor_directory,,False,find_store,S15,False,find_store,S25,True,2
+tatlı köşeyi arıyorum,find_store,S21,find_store,S21,True,recommend_category,tatlı,False,find_store,S15,False,find_store,S21,True,2
+Derin Bavul tarafına gidecektim,find_store,S36,find_store,S36,True,find_store,S36,True,recommend_category,kozmetik,False,find_store,S36,True,3
+adım ayakkabı yok mu burda nerde bu,find_store,S08,find_store,S08,True,find_store,S08,True,find_store,S15,False,recommend_category,spor,False,2
+kahve molası ne tarafta,find_store,S22,find_store,S22,True,find_store,S22,True,find_store,S15,False,find_store,S22,True,3
+aroma kozmetiğe gitmek istiyorum,find_store,S14,find_store,S14,True,find_store,S14,True,find_store,S15,False,find_store,S35,False,2
+Bit Elektronik'in yerini söyler misin,find_store,S11,find_store,S11,True,find_store,S11,True,recommend_category,kozmetik,False,find_store,S11,True,3
+optik bakışa gözlüğümü almaya gidicem,find_store,S34,find_store,S34,True,find_store,S34,True,find_store,S15,False,find_store,S24,False,2
+Urban Çizgi'yi nerden bulurum,find_store,S04,find_store,S04,True,find_facility,,False,find_store,S15,False,find_store,S04,True,2
+en yakın wc,find_facility,tuvalet,find_facility,tuvalet,True,find_facility,tuvalet,True,find_facility,tuvalet,True,find_facility,tuvalet,True,4
+lavaboya gitmem lazım acil,find_facility,tuvalet,find_facility,tuvalet,True,find_facility,tuvalet,True,find_store,S02,False,find_facility,tuvalet,True,3
+bebeğimi emzirmek için sakin bir yer var mı,find_facility,bebek bakım odası,out_of_scope,,False,find_facility,,False,find_facility,tuvalet,False,find_facility,bebek bakım odası,True,1
+bebek bezi değiştireceğim uygun yer neresi,find_facility,bebek bakım odası,find_facility,bebek bakım odası,True,find_facility,bebek bakım odası,True,find_store,S15,False,find_facility,bebek bakım odası,True,3
+para çekeceğim bankamatik var mı,find_facility,atm,find_facility,atm,True,find_facility,atm,True,find_facility,atm,True,find_facility,atm,True,4
+atm nereden bulurum,find_facility,atm,find_facility,atm,True,find_facility,atm,True,find_facility,tuvalet,False,find_facility,atm,True,3
+arabamı nereye bırakmıştım otopark girişi nerede,find_facility,otopark,find_facility,otopark,True,find_facility,otopark,True,opening_hours,S02,False,find_facility,otopark,True,3
+otoparka nasıl inerim,find_facility,otopark,find_facility,otopark,True,find_facility,otopark,True,find_facility,mescit,False,find_facility,otopark,True,3
+asansör nerede tekerlekli sandalyem var,find_facility,asansör,find_facility,asansör,True,find_facility,asansör,True,find_facility,tuvalet,False,find_facility,atm,False,2
+üst kata çıkmak için lift nerde,find_facility,asansör,find_facility,asansör,True,find_facility,asansör,True,floor_directory,0,False,find_facility,atm,False,2
+namaz kılacak yer var mı,find_facility,mescit,find_facility,mescit,True,find_facility,mescit,True,find_facility,tuvalet,False,find_facility,mescit,True,3
+mescit hangi katta,find_facility,mescit,find_facility,mescit,True,find_facility,mescit,True,find_facility,mescit,True,find_facility,mescit,True,4
+danışma nerede kaybolduk,find_facility,danışma,find_facility,danışma,True,find_facility,danışma,True,find_facility,mescit,False,find_facility,danışma,True,3
+bilgi noktası var mı,find_facility,danışma,find_facility,danışma,True,find_facility,danışma,True,find_facility,tuvalet,False,find_facility,danışma,True,3
+çocuğumu kaybettim güvenliğe nereden ulaşırım,find_facility,danışma,out_of_scope,,False,find_store,,False,recommend_category,kozmetik,False,find_facility,bebek bakım odası,False,0
+elimi yüzümü yıkayacağım yer,find_facility,tuvalet,out_of_scope,,False,out_of_scope,,False,recommend_category,kozmetik,False,find_facility,mescit,False,0
+karnım acıktı bi şeyler yiyelim,recommend_category,yemek,out_of_scope,,False,opening_hours,,False,find_store,S15,False,out_of_scope,,False,0
+burada iyi bir restoran var mı,recommend_category,yemek,recommend_category,yemek,True,recommend_category,yemek,True,recommend_category,mücevher,False,recommend_category,yemek,True,3
+akşam yemeği için bir yer arıyoruz,recommend_category,yemek,out_of_scope,,False,recommend_category,,False,recommend_category,kozmetik,False,recommend_category,yemek,True,1
+kahve içmek istiyorum,recommend_category,kahve,recommend_category,kahve,True,find_store,,False,recommend_category,kozmetik,False,recommend_category,kahve,True,2
+bir çay içelim nerde oturulur,recommend_category,kahve,recommend_category,kahve,True,find_facility,,False,find_store,S15,False,recommend_category,kahve,True,2
+tatlı yemek istiyorum,recommend_category,tatlı,recommend_category,tatlı,True,find_store,,False,recommend_category,kozmetik,False,recommend_category,yemek,False,1
+çocuğa kıyafet bakıyorum,recommend_category,çocuk giyim,recommend_category,giyim,False,recommend_category,giyim,False,recommend_category,kozmetik,False,recommend_category,çocuk giyim,True,1
+oğluma ayakkabı alacağım,recommend_category,ayakkabı,recommend_category,ayakkabı,True,find_store,,False,recommend_category,kozmetik,False,recommend_category,çocuk giyim,False,1
+spor ayakkabı bakmak istiyorum,recommend_category,ayakkabı,recommend_category,ayakkabı,True,find_store,,False,recommend_category,kozmetik,False,recommend_category,spor,False,1
+yeni telefon almayı düşünüyorum,recommend_category,elektronik,recommend_category,elektronik,True,find_store,,False,recommend_category,kozmetik,False,recommend_category,kozmetik,False,1
+bilgisayar bakacaktım,recommend_category,elektronik,recommend_category,elektronik,True,out_of_scope,,False,recommend_category,kozmetik,False,recommend_category,elektronik,True,2
+annem için parfüm lazım,recommend_category,kozmetik,recommend_category,kozmetik,True,recommend_category,kozmetik,True,recommend_category,kozmetik,True,recommend_category,kozmetik,True,4
+kitap almak istiyorum,recommend_category,kitap,recommend_category,kitap,True,find_store,,False,recommend_category,kozmetik,False,recommend_category,mücevher,False,1
+kırtasiye malzemesi lazım,recommend_category,kitap,recommend_category,kitap,True,recommend_category,kitap,True,recommend_category,kozmetik,False,recommend_category,ev ve dekor,False,2
+doğum günü hediyesi arıyorum,recommend_category,hediye,recommend_category,hediye,True,recommend_category,hediye,True,recommend_category,kozmetik,False,recommend_category,ev ve dekor,False,2
+sevgilime takı bakmak istiyorum,recommend_category,mücevher,recommend_category,mücevher,True,find_store,,False,find_store,S02,False,recommend_category,mücevher,True,2
+gözlük camı değiştirtmem lazım,recommend_category,optik,recommend_category,optik,True,recommend_category,optik,True,find_facility,tuvalet,False,find_facility,bebek bakım odası,False,2
+mutfak eşyası bakıyorum,recommend_category,ev ve dekor,recommend_category,ev ve dekor,True,recommend_category,ev ve dekor,True,recommend_category,kozmetik,False,recommend_category,ev ve dekor,True,3
+çanta bakmak istiyorum,recommend_category,çanta,recommend_category,çanta,True,find_store,,False,recommend_category,kozmetik,False,recommend_category,çocuk giyim,False,1
+ilaç almam gerekiyor eczane var mı,recommend_category,eczane,recommend_category,eczane,True,recommend_category,eczane,True,recommend_category,kozmetik,False,recommend_category,eczane,True,3
+sinemaya gidelim mi nerde,recommend_category,eğlence,recommend_category,eğlence,True,find_store,,False,out_of_scope,,False,recommend_category,kozmetik,False,1
+çocuklar için oyuncak var mı,recommend_category,oyuncak,recommend_category,oyuncak,True,recommend_category,oyuncak,True,recommend_category,mücevher,False,recommend_category,çocuk giyim,False,2
+market alışverişi yapacağım,recommend_category,market,recommend_category,market,True,opening_hours,,False,recommend_category,kozmetik,False,recommend_category,çocuk giyim,False,1
+elbise bakmak istiyorum,recommend_category,giyim,recommend_category,giyim,True,find_store,,False,recommend_category,kozmetik,False,recommend_category,çocuk giyim,False,1
+Kebap Sarayı saat kaça kadar açık,opening_hours,S17,opening_hours,S17,True,opening_hours,S17,True,opening_hours,S15,False,opening_hours,S21,False,2
+Yıldız Sinema akşam kaça kadar açık,opening_hours,S32,opening_hours,S32,True,opening_hours,S32,True,opening_hours,S15,False,opening_hours,S35,False,2
+Mavi Eczane şimdi açık mı,opening_hours,S35,opening_hours,S35,True,opening_hours,S35,True,opening_hours,S15,False,opening_hours,S35,True,3
+Şehir Market kaçta kapanıyor,opening_hours,S25,opening_hours,S25,True,opening_hours,S25,True,opening_hours,S15,False,opening_hours,S25,True,3
+Kalem Kırtasiye kaçta açılıyor,opening_hours,S16,opening_hours,S16,True,opening_hours,S16,True,opening_hours,S15,False,opening_hours,S16,True,3
+Sayfa Kitabevi bu saatte çalışıyor mu,opening_hours,S15,opening_hours,S15,True,opening_hours,S15,True,find_store,S15,False,opening_hours,S15,True,3
+alışveriş merkezi akşam kaça kadar açık,opening_hours,,opening_hours,,True,opening_hours,,True,opening_hours,S15,True,opening_hours,S36,True,4
+avm hafta sonu açık mı,opening_hours,,opening_hours,,True,opening_hours,,True,opening_hours,S15,True,opening_hours,S35,True,4
+Kahve Molası sabah kaçta açılıyor,opening_hours,S22,opening_hours,S22,True,opening_hours,S22,True,opening_hours,S15,False,opening_hours,S22,True,3
+Zaman Saat pazar günleri açık mı,opening_hours,S29,opening_hours,S29,True,opening_hours,S29,True,opening_hours,S15,False,opening_hours,S29,True,3
+Oyun Kulesi gece kaça kadar,opening_hours,S33,opening_hours,S33,True,opening_hours,S33,True,find_store,S15,False,opening_hours,S33,True,3
+zemin katta hangi mağazalar var,floor_directory,0,floor_directory,0,True,floor_directory,0,True,floor_directory,2,False,floor_directory,0,True,3
+birinci kattaki dükkanlar neler,floor_directory,1,floor_directory,1,True,floor_directory,1,True,floor_directory,2,False,floor_directory,1,True,3
+ikinci kata çıkacağız orada ne var,floor_directory,2,floor_directory,2,True,floor_directory,2,True,floor_directory,0,False,floor_directory,2,True,3
+1. kat mağaza listesi,floor_directory,1,floor_directory,1,True,floor_directory,1,True,floor_directory,2,False,floor_directory,1,True,3
+zemin kat planı,floor_directory,0,floor_directory,0,True,floor_directory,0,True,floor_directory,2,False,floor_directory,0,True,3
+2 katta yemek yeri var mı neler var,floor_directory,2,floor_directory,2,True,floor_directory,2,True,floor_directory,2,True,floor_directory,2,True,4
+alt katta ne var,floor_directory,0,out_of_scope,,False,floor_directory,,False,floor_directory,2,False,floor_directory,0,True,1
+yardım eder misiniz,greeting_help,,greeting_help,,True,greeting_help,,True,greeting_help,,True,greeting_help,,True,4
+teşekkür ederim çok sağ olun,greeting_help,,greeting_help,,True,greeting_help,,True,greeting_help,,True,greeting_help,,True,4
+naber,greeting_help,,greeting_help,,True,greeting_help,,True,greeting_help,,True,greeting_help,,True,4
+bir şey soracaktım,greeting_help,,out_of_scope,,False,greeting_help,,True,greeting_help,,True,out_of_scope,,False,2
+hoşça kalın,greeting_help,,recommend_category,mücevher,False,opening_hours,,False,greeting_help,,True,greeting_help,,True,2
+sen kimsin ne işe yarıyorsun,greeting_help,,out_of_scope,,False,recommend_category,,False,out_of_scope,,False,greeting_help,,True,1
+bugün hava nasıl olacak,out_of_scope,,out_of_scope,,True,out_of_scope,,True,out_of_scope,,True,out_of_scope,,True,4
+taksi çağırır mısın,out_of_scope,,recommend_category,mücevher,False,recommend_category,mücevher,False,recommend_category,kozmetik,False,recommend_category,elektronik,False,0
+wifi şifresi nedir,out_of_scope,,out_of_scope,,True,find_store,,False,find_store,S02,False,find_facility,atm,False,1
+otopark ücreti ne kadar,out_of_scope,,find_facility,otopark,False,find_facility,otopark,False,find_facility,atm,False,find_facility,otopark,False,0
+indirim var mı bu hafta,out_of_scope,,out_of_scope,,True,recommend_category,,False,out_of_scope,,True,recommend_category,çocuk giyim,False,2
+bu akşam maç var mı,out_of_scope,,out_of_scope,,True,find_facility,,False,out_of_scope,,True,out_of_scope,,True,3
+bana bir fıkra anlat,out_of_scope,,out_of_scope,,True,out_of_scope,,True,out_of_scope,,True,out_of_scope,,True,4
+dolar kaç lira,out_of_scope,,out_of_scope,,True,out_of_scope,,True,out_of_scope,,True,out_of_scope,,True,4
+kargom ne zaman gelir,out_of_scope,,out_of_scope,,True,find_store,,False,out_of_scope,,True,out_of_scope,,True,3
+burası kaç yılında açıldı,out_of_scope,,out_of_scope,,True,out_of_scope,,True,find_store,S15,False,opening_hours,S28,False,2
+güvenlik görevlisini çağır,out_of_scope,,out_of_scope,,True,find_store,,False,find_store,S15,False,find_facility,atm,False,1
+kayıp eşya bildirmek istiyorum,out_of_scope,,out_of_scope,,True,find_store,,False,recommend_category,kozmetik,False,find_store,S12,False,1
+ankara'ya otobüs kaçta,out_of_scope,,out_of_scope,,True,out_of_scope,,True,out_of_scope,,True,out_of_scope,,True,4

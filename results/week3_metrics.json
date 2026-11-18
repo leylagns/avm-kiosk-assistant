@@ -1,0 +1,146 @@
+{
+  "E0 Kural|val": {
+    "intent_acc": 0.8979591836734694,
+    "intent_macro_f1": 0.8975986254893241,
+    "entity_acc": 0.9580838323353293,
+    "end_to_end_acc": 0.8979591836734694,
+    "latency_mean_ms": 13.014468179591292,
+    "latency_p95_ms": 28.887959799965294,
+    "n": 245.0
+  },
+  "E0 Kural|test": {
+    "intent_acc": 0.8821428571428571,
+    "intent_macro_f1": 0.8796785762693694,
+    "entity_acc": 0.9484536082474226,
+    "end_to_end_acc": 0.8821428571428571,
+    "latency_mean_ms": 10.758087364286391,
+    "latency_p95_ms": 21.804711850032277,
+    "n": 280.0
+  },
+  "E0 Kural|test_hard": {
+    "intent_acc": 0.675,
+    "intent_macro_f1": 0.6882058037631694,
+    "entity_acc": 0.7925531914893617,
+    "end_to_end_acc": 0.675,
+    "latency_mean_ms": 13.623984275000112,
+    "latency_p95_ms": 26.32555509999577,
+    "n": 280.0
+  },
+  "E0 Kural|test_llm": {
+    "intent_acc": 0.8865979381443299,
+    "intent_macro_f1": 0.8657967032967033,
+    "entity_acc": 0.9078947368421053,
+    "end_to_end_acc": 0.8762886597938144,
+    "latency_mean_ms": 11.705144412372675,
+    "latency_p95_ms": 22.362056800034217,
+    "n": 97.0
+  },
+  "E1 TF-IDF+LR|val": {
+    "intent_acc": 1.0,
+    "intent_macro_f1": 1.0,
+    "entity_acc": 0.9760479041916168,
+    "end_to_end_acc": 0.9836734693877551,
+    "latency_mean_ms": 4.922514269388762,
+    "latency_p95_ms": 13.577495399999854,
+    "n": 245.0
+  },
+  "E1 TF-IDF+LR|test": {
+    "intent_acc": 1.0,
+    "intent_macro_f1": 1.0,
+    "entity_acc": 0.9742268041237113,
+    "end_to_end_acc": 0.9821428571428571,
+    "latency_mean_ms": 7.2594865428582365,
+    "latency_p95_ms": 18.218163950021463,
+    "n": 280.0
+  },
+  "E1 TF-IDF+LR|test_hard": {
+    "intent_acc": 0.6642857142857143,
+    "intent_macro_f1": 0.6731453862025895,
+    "entity_acc": 0.601063829787234,
+    "end_to_end_acc": 0.6214285714285714,
+    "latency_mean_ms": 7.862056021427374,
+    "latency_p95_ms": 22.91185489997929,
+    "n": 280.0
+  },
+  "E1 TF-IDF+LR|test_llm": {
+    "intent_acc": 0.6804123711340206,
+    "intent_macro_f1": 0.7168177127310252,
+    "entity_acc": 0.6710526315789473,
+    "end_to_end_acc": 0.6391752577319587,
+    "latency_mean_ms": 5.992004402060047,
+    "latency_p95_ms": 12.612962999980937,
+    "n": 97.0
+  },
+  "E2a DistilBERTurk|val": {
+    "intent_acc": 0.9551020408163265,
+    "intent_macro_f1": 0.9550905943418254,
+    "entity_acc": 0.1497005988023952,
+    "end_to_end_acc": 0.4122448979591837,
+    "latency_mean_ms": 9.421210073466394,
+    "latency_p95_ms": 12.177166400022088,
+    "n": 245.0
+  },
+  "E2a DistilBERTurk|test": {
+    "intent_acc": 0.9428571428571428,
+    "intent_macro_f1": 0.9430052235665374,
+    "entity_acc": 0.16494845360824742,
+    "end_to_end_acc": 0.4142857142857143,
+    "latency_mean_ms": 9.555056878571529,
+    "latency_p95_ms": 12.1859384500425,
+    "n": 280.0
+  },
+  "E2a DistilBERTurk|test_hard": {
+    "intent_acc": 0.6714285714285714,
+    "intent_macro_f1": 0.6695015238635912,
+    "entity_acc": 0.1702127659574468,
+    "end_to_end_acc": 0.3357142857142857,
+    "latency_mean_ms": 9.997523524998135,
+    "latency_p95_ms": 12.819201400023417,
+    "n": 280.0
+  },
+  "E2a DistilBERTurk|test_llm": {
+    "intent_acc": 0.7319587628865979,
+    "intent_macro_f1": 0.7703883964967709,
+    "entity_acc": 0.09210526315789473,
+    "end_to_end_acc": 0.20618556701030927,
+    "latency_mean_ms": 13.518876092787876,
+    "latency_p95_ms": 18.644883399986156,
+    "n": 97.0
+  },
+  "E2b BERTurk|val": {
+    "intent_acc": 0.9959183673469387,
+    "intent_macro_f1": 0.9959175341906512,
+    "entity_acc": 0.8502994011976048,
+    "end_to_end_acc": 0.8979591836734694,
+    "latency_mean_ms": 19.70537564489878,
+    "latency_p95_ms": 31.116354399989632,
+    "n": 245.0
+  },
+  "E2b BERTurk|test": {
+    "intent_acc": 0.9892857142857143,
+    "intent_macro_f1": 0.9893286897506306,
+    "entity_acc": 0.8608247422680413,
+    "end_to_end_acc": 0.8964285714285715,
+    "latency_mean_ms": 17.981068642856506,
+    "latency_p95_ms": 23.549979999970112,
+    "n": 280.0
+  },
+  "E2b BERTurk|test_hard": {
+    "intent_acc": 0.8142857142857143,
+    "intent_macro_f1": 0.8158602713396496,
+    "entity_acc": 0.675531914893617,
+    "end_to_end_acc": 0.7107142857142857,
+    "latency_mean_ms": 21.223052835715148,
+    "latency_p95_ms": 32.393262850001754,
+    "n": 280.0
+  },
+  "E2b BERTurk|test_llm": {
+    "intent_acc": 0.8865979381443299,
+    "intent_macro_f1": 0.8819841846017533,
+    "entity_acc": 0.618421052631579,
+    "end_to_end_acc": 0.6185567010309279,
+    "latency_mean_ms": 19.26462857731045,
+    "latency_p95_ms": 23.641355800054946,
+    "n": 97.0
+  }
+}
