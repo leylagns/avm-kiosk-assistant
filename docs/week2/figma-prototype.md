@@ -1,40 +1,31 @@
-# Hafta 2 – Figma tıklanabilir prototip (AVM Kiosk Asistanı)
+# Hafta 2: Figma tıklanabilir prototip (AVM Rehber web sitesi)
 
-**Figma dosyası:** https://www.figma.com/design/SOANV5pMG98Y0GxCVBxn2y
-(Sunum için: dosyayı aç → "Karşılama" çerçevesini seç → sağ üstte ▶ **Present**. Hocaların görebilmesi için dosyada *Share → Anyone with the link can view* ayarı yapılmalıdır.)
+**Figma dosyası:** https://www.figma.com/design/l62Wlur5iwBOSl0ak7DEWj
 
-Kiosk dikey ekran (1080 × 1920 px) olarak tasarlandı; dokunmatik kullanım için büyük hedefler ve büyük yazı boyutları kullanıldı.
+Sunum için: dosyayı aç, sağ üstte **Present (▶)** düğmesine bas. Akış "Kiosk web sitesi akışı" adıyla Giriş ekranından başlar.
 
-## Ekranlar ve akış
+## 6 ekran
 
-| # | Ekran | Amaç | Buradan nereye? |
-|---|-------|------|-----------------|
-| 1 | Karşılama | Arama çubuğu + sık aranan kategoriler | Arama → 2 · Tuvalet → 4 · diğer kategoriler → 5 |
-| 2 | Sorgu | Doğal dilde yazma, ekran klavyesi, örnek sorgular | Ara → 3 · "taksi çağırır mısın" → 6 · "acıktım" → 5 |
-| 3 | Anlaşıldı mı? | Modelin çıkardığı niyet + varlık + eminlik gösterilir, kullanıcı onaylar | Evet → 4 · Hayır → 2 |
-| 4 | Rota | Kat planı üstünde en kısa yol, adım adım tarif | Yeni arama → 1 |
-| 5 | Öneriler | Kategori sorgusunda (ör. yemek) mağaza listesi | Yol tarif et → 4 |
-| 6 | Anlaşılamadı | Kapsam dışı / düşük güven için güvenli geri dönüş | Tekrar dene → 2 |
+| # | Ekran | Amaç |
+|---|---|---|
+| 1 | Giriş | E-posta/şifre ile giriş veya misafir olarak devam |
+| 2 | Ana sayfa | Doğal dil arama kutusu, hızlı sorular, sık kullanılan yerler |
+| 3 | Arama / sohbet | Algılanan niyet, varlık ve güven; öneri kartları; "Şunu mu demek istediniz?" |
+| 4 | Rota | Adım adım yönlendirme ve kat haritasında en kısa yol |
+| 5 | Mağazalar | Kat ve kategori filtreli mağaza/tesis dizini |
+| 6 | Yönetim | KPI'lar, niyet dağılımı, model karşılaştırma, son sorgular |
 
-Ana akışlar:
+## Tıklanabilir akış
 
-- **Yer arama:** 1 → 2 → 3 → 4 (niyet: `find_facility` / `find_store`)
-- **Öneri:** 1 → 5 → 4 (niyet: `recommend_category`)
-- **Kapsam dışı:** 2 → 6 → 2 (niyet: `out_of_scope`)
+- Giriş → "Giriş Yap" veya "Misafir olarak devam et" → Ana sayfa
+- Ana sayfa → arama kutusu, "Sor", hızlı soru çipleri veya yer kartları → Arama
+- Arama → "Yol tarifi" veya önerilen seçenekler → Rota; "Ana sayfa" → Ana sayfa
+- Rota → "Aramaya dön" → Arama; "Yeni arama yap" → Ana sayfa
+- Mağazalar → herhangi bir "Yol tarifi" → Rota
+- Üst menü (Ana Sayfa / Mağazalar / Yönetim / Çıkış) tüm ekranlardan çalışır
 
 ## Tasarım kararları
 
-- **Güven eşiği arayüzde görünür (Ekran 3):** Model emin değilse sonuç doğrudan gösterilmez, kullanıcıya "Sizi şöyle anladım" ile onaylatılır. Hafta 3'teki risk–kapsama analizinin ürün karşılığıdır.
-- **Kapsam dışı için ayrı ekran (Ekran 6):** Mağaza dışı sorular (taksi, fıkra vb.) yanlış rota göstermez.
-- **Renkler:** mavi (birincil), mercan (hedef/vurgu), yeşil (açık/başarılı), sıcak gri zemin. **Yazı tipi:** Inter.
-- **Sayılar uydurma değildir ama örnektir:** mesafe, süre ve eminlik değerleri prototip içindir; gerçek değerler Hafta 6–7'de NLU ve rota servisinden gelecek.
-
-## Önizleme
-
-| 1 Karşılama | 2 Sorgu | 3 Anlaşıldı mı? |
-|---|---|---|
-| ![1](figma/1-karsilama.png) | ![2](figma/2-sorgu.png) | ![3](figma/3-anlasildi-mi.png) |
-
-| 4 Rota | 5 Öneriler | 6 Anlaşılamadı |
-|---|---|---|
-| ![4](figma/4-rota.png) | ![5](figma/5-oneriler.png) | ![6](figma/6-anlasilamadi.png) |
+- **Güven eşiği arayüzde görünür (Ekran 3):** Model emin değilse sonuç doğrudan gösterilmez, kullanıcıya "Şunu mu demek istediniz?" ile onaylatılır. Hafta 3'teki risk–kapsama analizinin ürün karşılığıdır.
+- **Yönetim ekranı (Ekran 6):** Sayılar tasarım amaçlı örnek veridir. Model karşılaştırma kutusu Hafta 3 1. koşu sonuçlarını kullanır.
+- **Tasarım sistemi:** Inter yazı tipi, ana renk indigo, vurgu amber; düğme, çip ve rozet yerel bileşenlerdir.
