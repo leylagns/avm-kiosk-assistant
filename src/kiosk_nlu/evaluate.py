@@ -6,8 +6,6 @@ import json
 import time
 from pathlib import Path
 
-import matplotlib
-matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
@@ -42,6 +40,7 @@ def evaluate_split(model, df):
     out = df.copy()
     out["pred_intent"] = pred["intent"]
     out["pred_entity"] = pred["entity_value"]
+    out["confidence"] = pred["confidence"]
     has_ent = out["entity_type"].notna()
     ent_ok = [same(g, p) if (isinstance(p, str) or pd.isna(p)) else same(str(g), str(p))
               for g, p in zip(out["entity_value"], out["pred_entity"])]

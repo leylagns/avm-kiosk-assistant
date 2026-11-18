@@ -43,15 +43,24 @@ def test_unknown_store_returns_none(gaz):
 
 
 def test_dataset_files_valid():
-    for name in ["train", "val", "test", "test_hard"]:
+    for name in ["train", "val", "test", "test_hard", "test_llm"]:
         df = pd.read_csv(OUT / f"{name}.csv")
         assert set(df.intent) <= set(INTENTS)
         assert df.text.notna().all()
 
 
 def test_no_leakage_between_splits():
-    sets = {n: set(pd.read_csv(OUT / f"{n}.csv").text) for n in ["train", "val", "test", "test_hard"]}
+    sets = {n: set(pd.read_csv(OUT / f"{n}.csv").text) for n in ["train", "val", "test", "test_hard", "test_llm"]}
     names = list(sets)
     for i, a in enumerate(names):
         for b in names[i + 1:]:
             assert not (sets[a] & sets[b]), f"{a} ve {b} arasında aynı metin var"
+
+
+def test_rule_model_basics():
+    from kiosk_nlu.rules import RuleNLU
+    m = RuleNLU()
+    assert m.parse("kebap sarayı nerede")["intent"] == "find_store"
+    assert m.parse("pizza fırını kaça kadar açık")["intent"] == "opening_hours"
+    assert m.parse("en yakın wc")["entity_value"] == "tuvalet"
+    assert m.parse("bugün hava nasıl")["intent"] == "out_of_scope"

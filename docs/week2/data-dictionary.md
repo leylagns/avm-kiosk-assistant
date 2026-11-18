@@ -50,4 +50,5 @@
 | train.csv | 1540 | Eğitim |
 | val.csv | 245 | Eşik/hiperparametre seçimi |
 | test.csv | 280 | Dağılım içi kontrol |
-| test_hard.csv | 280 | Asıl değerlendirme: yeni şablonlar, örtük ifade, ağır gürültü |
+| test_hard.csv | 280 | Zor değerlendirme: yeni şablonlar, örtük ifade, ağır gürültü (şablonla üretilmiş) |
+| test_llm.csv | 100'e yakın | Şablonlardan bağımsız, gerçek ziyaretçi tarzında cümleler. **Bir dil modeli (LLM) tarafından yazıldı, gerçek kullanıcı verisi değildir**; eğitime hiç girmez. Gerçek sorgular toplanınca `test_real.csv` olarak eklenecek. |

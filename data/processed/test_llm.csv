@@ -1,0 +1,98 @@
+text,intent,entity_type,entity_value
+Kebap Sarayı'na gitmem lazım,find_store,store,S17
+pizza fırını hangi tarafta,find_store,store,S19
+Burger Hane'ye nasıl giderim,find_store,store,S20
+arkadaşlar Zaman Saat'in önünde bekliyor ben nerden gideyim,find_store,store,S29
+Mavi Eczane'nin yeri neresiydi,find_store,store,S35
+oyuncak adasına çocukla gideceğiz yolu tarif eder misiniz,find_store,store,S26
+sayfa kitabevini bulamıyorum,find_store,store,S15
+Telefon Dünyası bu avmde mi,find_store,store,S12
+Yıldız Sinema'ya bilet almaya gidiyorum,find_store,store,S32
+moda sokağı butiğine uğrayacaktım,find_store,store,S01
+Lahmacun Evi'nde buluşacağız yönlendirir misiniz,find_store,store,S18
+Şehir Market'e ineceğim kaçıncı katta,find_store,store,S25
+tatlı köşeyi arıyorum,find_store,store,S21
+Derin Bavul tarafına gidecektim,find_store,store,S36
+adım ayakkabı yok mu burda nerde bu,find_store,store,S08
+kahve molası ne tarafta,find_store,store,S22
+aroma kozmetiğe gitmek istiyorum,find_store,store,S14
+Bit Elektronik'in yerini söyler misin,find_store,store,S11
+optik bakışa gözlüğümü almaya gidicem,find_store,store,S34
+Urban Çizgi'yi nerden bulurum,find_store,store,S04
+en yakın wc,find_facility,facility,tuvalet
+lavaboya gitmem lazım acil,find_facility,facility,tuvalet
+bebeğimi emzirmek için sakin bir yer var mı,find_facility,facility,bebek bakım odası
+bebek bezi değiştireceğim uygun yer neresi,find_facility,facility,bebek bakım odası
+para çekeceğim bankamatik var mı,find_facility,facility,atm
+atm nereden bulurum,find_facility,facility,atm
+arabamı nereye bırakmıştım otopark girişi nerede,find_facility,facility,otopark
+otoparka nasıl inerim,find_facility,facility,otopark
+asansör nerede tekerlekli sandalyem var,find_facility,facility,asansör
+üst kata çıkmak için lift nerde,find_facility,facility,asansör
+namaz kılacak yer var mı,find_facility,facility,mescit
+mescit hangi katta,find_facility,facility,mescit
+danışma nerede kaybolduk,find_facility,facility,danışma
+bilgi noktası var mı,find_facility,facility,danışma
+çocuğumu kaybettim güvenliğe nereden ulaşırım,find_facility,facility,danışma
+elimi yüzümü yıkayacağım yer,find_facility,facility,tuvalet
+karnım acıktı bi şeyler yiyelim,recommend_category,category,yemek
+burada iyi bir restoran var mı,recommend_category,category,yemek
+akşam yemeği için bir yer arıyoruz,recommend_category,category,yemek
+kahve içmek istiyorum,recommend_category,category,kahve
+bir çay içelim nerde oturulur,recommend_category,category,kahve
+tatlı yemek istiyorum,recommend_category,category,tatlı
+çocuğa kıyafet bakıyorum,recommend_category,category,çocuk giyim
+oğluma ayakkabı alacağım,recommend_category,category,ayakkabı
+spor ayakkabı bakmak istiyorum,recommend_category,category,ayakkabı
+yeni telefon almayı düşünüyorum,recommend_category,category,elektronik
+bilgisayar bakacaktım,recommend_category,category,elektronik
+annem için parfüm lazım,recommend_category,category,kozmetik
+kitap almak istiyorum,recommend_category,category,kitap
+kırtasiye malzemesi lazım,recommend_category,category,kitap
+doğum günü hediyesi arıyorum,recommend_category,category,hediye
+sevgilime takı bakmak istiyorum,recommend_category,category,mücevher
+gözlük camı değiştirtmem lazım,recommend_category,category,optik
+mutfak eşyası bakıyorum,recommend_category,category,ev ve dekor
+çanta bakmak istiyorum,recommend_category,category,çanta
+ilaç almam gerekiyor eczane var mı,recommend_category,category,eczane
+sinemaya gidelim mi nerde,recommend_category,category,eğlence
+çocuklar için oyuncak var mı,recommend_category,category,oyuncak
+market alışverişi yapacağım,recommend_category,category,market
+elbise bakmak istiyorum,recommend_category,category,giyim
+Kebap Sarayı saat kaça kadar açık,opening_hours,store,S17
+Yıldız Sinema akşam kaça kadar açık,opening_hours,store,S32
+Mavi Eczane şimdi açık mı,opening_hours,store,S35
+Şehir Market kaçta kapanıyor,opening_hours,store,S25
+Kalem Kırtasiye kaçta açılıyor,opening_hours,store,S16
+Sayfa Kitabevi bu saatte çalışıyor mu,opening_hours,store,S15
+alışveriş merkezi akşam kaça kadar açık,opening_hours,,
+avm hafta sonu açık mı,opening_hours,,
+Kahve Molası sabah kaçta açılıyor,opening_hours,store,S22
+Zaman Saat pazar günleri açık mı,opening_hours,store,S29
+Oyun Kulesi gece kaça kadar,opening_hours,store,S33
+zemin katta hangi mağazalar var,floor_directory,floor,0
+birinci kattaki dükkanlar neler,floor_directory,floor,1
+ikinci kata çıkacağız orada ne var,floor_directory,floor,2
+1. kat mağaza listesi,floor_directory,floor,1
+zemin kat planı,floor_directory,floor,0
+2 katta yemek yeri var mı neler var,floor_directory,floor,2
+alt katta ne var,floor_directory,floor,0
+yardım eder misiniz,greeting_help,,
+teşekkür ederim çok sağ olun,greeting_help,,
+naber,greeting_help,,
+bir şey soracaktım,greeting_help,,
+hoşça kalın,greeting_help,,
+sen kimsin ne işe yarıyorsun,greeting_help,,
+bugün hava nasıl olacak,out_of_scope,,
+taksi çağırır mısın,out_of_scope,,
+wifi şifresi nedir,out_of_scope,,
+otopark ücreti ne kadar,out_of_scope,,
+indirim var mı bu hafta,out_of_scope,,
+bu akşam maç var mı,out_of_scope,,
+bana bir fıkra anlat,out_of_scope,,
+dolar kaç lira,out_of_scope,,
+kargom ne zaman gelir,out_of_scope,,
+burası kaç yılında açıldı,out_of_scope,,
+güvenlik görevlisini çağır,out_of_scope,,
+kayıp eşya bildirmek istiyorum,out_of_scope,,
+ankara'ya otobüs kaçta,out_of_scope,,

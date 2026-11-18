@@ -97,5 +97,9 @@ class BertNLU:
                 value = self.entity_labels[best].split(":", 1)[1]
         return {"intent": intent, "confidence": conf, "entity_type": etype, "entity_value": value}
 
+    def n_params(self) -> int:
+        """İki başın toplam parametre sayısı."""
+        return sum(p.numel() for m in (self.intent_model, self.entity_model) for p in m.parameters())
+
     def predict_intents(self, texts):
         return [self.parse(t)["intent"] for t in texts]
