@@ -9,7 +9,7 @@ AVM kiosk için Türkçe doğal dil asistanı: kullanıcının cümlesinden **ni
 | 0 | Konu + öneri formu | ders sistemi / `docs/` |
 | 1 | Diyagramlar, isterler | [docs/week1](docs/week1) |
 | 2 | Mockup, veritabanı | [docs/week2](docs/week2) |
-| 3 | Veri, EDA, baseline | [docs/week3](docs/week3), [notebooks/01_eda.ipynb](notebooks/01_eda.ipynb) |
+| 3 | Veri, EDA, baseline | [docs/week3](docs/week3), [notebooks/01_eda.ipynb](notebooks/01_eda.ipynb), [Colab: notebooks/02_colab_week3.ipynb](https://colab.research.google.com/github/leylagns/avm-kiosk-assistant/blob/main/notebooks/02_colab_week3.ipynb) |
 
 ## Kurulum ve çalıştırma
 
