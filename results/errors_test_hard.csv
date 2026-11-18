@@ -1,0 +1,107 @@
+text,intent,entity_type,entity_value,pred_intent,pred_entity,intent_ok,entity_ok
+cocguma bir seyler bakacagim,recommend_category,category,çocuk giyim,out_of_scope,,False,False
+hocam sinema filmi oner evde izleerim,out_of_scope,,,recommend_category,eğlence,False,False
+acaba canım tatlı çekti,recommend_category,category,tatlı,opening_hours,,False,False
+acaba namaz kılma yri yerini gösterir misiniz,find_facility,facility,mescit,recommend_category,,False,False
+kahve bakmak istiyorum bir fikrin var mı,recommend_category,category,kahve,find_store,,False,False
+pastane için iyi bir yer biliyor musun teşekkürler,recommend_category,category,tatlı,greeting_help,,False,False
+mrb,greeting_help,,,find_store,,False,True
+ayakkabi numarasi nasli olculur?,out_of_scope,,,find_store,,False,True
+bebegimi emzirmem gerekiyor,find_facility,facility,bebek bakım odası,find_facility,,True,False
+tabanlık için yönlendirir misin,find_store,store,S09,recommend_category,,False,False
+kalem kırtasiye mesi saatleri nelerdir!,opening_hours,store,S16,find_store,S16,False,True
+acaba kayıp eşya için kime gideyim,find_facility,facility,danışma,recommend_category,giyim,False,False
+iyi günler kahve falı baktırır mısın,out_of_scope,,,recommend_category,kahve,False,False
+abi buger hane icin yonlendirir miisin,find_store,store,S20,recommend_category,,False,False
+wc bulamadim lütfen.,find_facility,facility,tuvalet,greeting_help,,False,False
+karnım çok aç?,recommend_category,category,yemek,out_of_scope,,False,False
+abest alıp namaz kılmak istiyorum yardım eder misin,find_facility,facility,mescit,find_facility,,True,False
+sade butik diye bir yer arıyorum,find_store,store,S03,recommend_category,hediye,False,False
+abi uykum var bir şey içmek istiyorum,recommend_category,category,kahve,recommend_category,,True,False
+spor ayakkabi alacagim nereler iyi,recommend_category,category,ayakkabı,find_store,,False,False
+burer hane için ne tarafa yürümem lazım,find_store,store,S20,recommend_category,,False,False
+firin sepeti aksam ack mi acaba,opening_hours,store,S24,find_store,S24,False,True
+sinema filmi oner evde izlerim!,out_of_scope,,,find_store,,False,True
+market alisverisi nasil butcelenir,out_of_scope,,,find_store,,False,True
+acaba sayfa kitbevi diye bir yer arriyorum,find_store,store,S15,recommend_category,hediye,False,False
+lütfen acıktım,recommend_category,category,yemek,opening_hours,,False,False
+elektronik konusunda ne önerirsin,recommend_category,category,elektronik,find_store,S11,False,False
+zmein kati gezemk istiyorum,floor_directory,floor,0,find_store,,False,False
+bebegimin bezini degistirmem lazim!,find_facility,facility,bebek bakım odası,find_facility,,True,False
+teknoloji duragi icin yonlendirir misin,find_store,store,S10,recommend_category,,False,False
+birinci katı gezmek istiyorum,floor_directory,floor,1,find_store,,False,False
+abi kahve fali baktirir misin?,out_of_scope,,,recommend_category,kahve,False,False
+zemin kaıt gezmek istiyorum,floor_directory,floor,0,find_store,,False,False
+mavi eczane dyie bir yer ariyorum teşekkürler?,find_store,store,S35,recommend_category,eczane,False,False
+bana bir şarkı söyle,out_of_scope,,,find_store,,False,True
+lütfen hediye bakmak istiyorum bir fikrin var mı!,recommend_category,category,hediye,find_store,,False,False
+nakit lazim nereden bulurum,find_facility,facility,atm,find_facility,,True,False
+kozmetik alacağım nereler iyi,recommend_category,category,kozmetik,find_store,,False,False
+hediye sepeti için ne tarafa yürümem lazım,find_store,store,S27,recommend_category,hediye,False,False
+pardon canım tatlı çekti,recommend_category,category,tatlı,find_facility,,False,False
+elimi yıkamam lazım,find_facility,facility,tuvalet,find_facility,,True,False
+ikinci katı gezmek istiyorum teşekkürler,floor_directory,floor,2,find_store,,False,False
+hosca kal,greeting_help,,,out_of_scope,,False,True
+canim tatli cekkti,recommend_category,category,tatlı,find_store,,False,False
+telefon dünyası diye bir yer var mıydı acaba??,find_store,store,S12,recommend_category,elektronik,False,False
+altin fiyatlari ne kadar,out_of_scope,,,opening_hours,,False,True
+lahmacun nasil yapilir teşekkürler,out_of_scope,,,greeting_help,,False,True
+burger hane bu saatte hizmet verioyr mu acaba,opening_hours,store,S20,find_store,S20,False,True
+2. katı gezmek istiyoorum!,floor_directory,floor,2,find_store,,False,False
+dekorasyon bakmak istiyorum bir fikrin var mı,recommend_category,category,ev ve dekor,find_store,,False,False
+lütfen 2. kati gezmek istiyorm,floor_directory,floor,2,find_store,,False,False
+lahmacun evi diye bir yer var mıydı acaba,find_store,store,S18,recommend_category,hediye,False,False
+pardon 2. katin plani var mi,floor_directory,floor,2,find_facility,,False,False
+bebeğimin bezini değiştirmem lazım,find_facility,facility,bebek bakım odası,find_facility,,True,False
+burger hane icin yonlendirir misin,find_store,store,S20,recommend_category,,False,False
+saat kaç şu an,out_of_scope,,,opening_hours,,False,True
+kavhe falı baktırır mısın,out_of_scope,,,recommend_category,kahve,False,False
+abi arkadaşıma doğum günü için bir şey alacağım,recommend_category,category,hediye,recommend_category,,True,False
+arkadaşıma doğum günü iin bir şey alacağım?,recommend_category,category,hediye,greeting_help,,False,False
+para cekmem gerekiyor,find_facility,facility,atm,find_facility,,True,False
+hediye sepeti akşam açık mı acaba teşekkürler.,opening_hours,store,S27,greeting_help,,False,False
+lütfen iinci kattaki dükkanları listeler misin.,floor_directory,floor,2,floor_directory,,True,False
+mrb?,greeting_help,,,find_store,,False,True
+minik adimlar icin ne tarafa yuurumem laizm,find_store,store,S05,recommend_category,,False,False
+ayakkabı numarası nasıl ölçülür,out_of_scope,,,find_store,,False,True
+iyi günler saat kac su an,out_of_scope,,,opening_hours,,False,True
+telefon dünyası için yönlendirir misin,find_store,store,S12,recommend_category,elektronik,False,False
+cok sikistim nereye gdeyim??,find_facility,facility,tuvalet,recommend_category,,False,False
+merhaba sinema filmi onr evde izlerim,out_of_scope,,,greeting_help,,False,True
+abdest alıp namza kımlak istiyorum,find_facility,facility,mescit,find_store,,False,False
+kahve fali baktirir misin,out_of_scope,,,recommend_category,kahve,False,False
+bebeğimi emzirmem gerekiyor,find_facility,facility,bebek bakım odası,find_facility,,True,False
+wc tarafı hangisi??,find_facility,facility,tuvalet,out_of_scope,,False,False
+bit elektronik icin yonlendirir misin,find_store,store,S11,recommend_category,elektronik,False,False
+lahmacun nasil yapilir yardım eder misin,out_of_scope,,,greeting_help,,False,True
+canmi tatli cekti lütfen,recommend_category,category,tatlı,find_store,,False,False
+elimi yikamam lazim lütfen,find_facility,facility,tuvalet,greeting_help,,False,False
+2. katı gezmek istiyorum,floor_directory,floor,2,find_store,,False,False
+lütfen atm yerini gosterir misiniz?,find_facility,facility,atm,recommend_category,,False,False
+lütfen kalem kirtasiye diye bir yer var miydi,find_store,store,S16,recommend_category,kitap,False,False
+otopark için ne tarafa gideyyim??,find_facility,facility,otopark,recommend_category,,False,False
+hocam kahve falı baktırır mısın,out_of_scope,,,recommend_category,kahve,False,False
+pardon kanrim cok ac,recommend_category,category,yemek,out_of_scope,,False,False
+kahve baakmak istiyorum bir fikrin var mi?,recommend_category,category,kahve,find_store,,False,False
+moda sokağı için ne tarafa yürümem lazıım,find_store,store,S01,recommend_category,,False,False
+danisma icin ne tarafa gideymi,find_facility,facility,danışma,recommend_category,,False,False
+iyi günler para çekmem gereiyor,find_facility,facility,atm,greeting_help,,False,False
+market alışverişi nasıl bütçelenir,out_of_scope,,,find_store,,False,True
+saat kac su an,out_of_scope,,,opening_hours,,False,True
+kahve fli baktirir misin,out_of_scope,,,recommend_category,kahve,False,False
+merhaba abdest alip namaz kilmak istiyorum,find_facility,facility,mescit,find_store,,False,False
+lift tarafi hangisi acaba,find_facility,facility,asansör,out_of_scope,,False,False
+sinema filmi oner evde izlerim teşekkürler??,out_of_scope,,,greeting_help,,False,True
+acaba ayakkabi numarasi nasil olculur!,out_of_scope,,,find_store,,False,True
+gris kaitn plani var mi yardım eder misin??,floor_directory,floor,0,find_facility,,False,False
+ikinci katı gezmek istiyorum lütfen.,floor_directory,floor,2,find_store,,False,False
+hocam namaz kilacagim uygun bir yer var mi,find_facility,facility,mescit,find_facility,,True,False
+giriş kaatı gezmek istiyorum,floor_directory,floor,0,find_store,,False,False
+hediye sepeti bu saatte hizmet veriyor mu,opening_hours,store,S27,find_store,S27,False,True
+canim tatli cekti,recommend_category,category,tatlı,find_store,,False,False
+kitap alacagim nereler iyi lütfen,recommend_category,category,kitap,greeting_help,,False,False
+ayakkabi numarasi nasil olculur,out_of_scope,,,find_store,,False,True
+koşu atölyesi diye bir yer arıyorum lütfen,find_store,store,S06,recommend_category,hediye,False,False
+bir şeyler atıştıracağım,recommend_category,category,yemek,find_store,,False,False
+sinema filmi öner evde izlerim,out_of_scope,,,find_store,,False,True
+çocuğuma bir şeyler bakacağım,recommend_category,category,çocuk giyim,out_of_scope,,False,False

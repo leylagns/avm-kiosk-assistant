@@ -1,0 +1,281 @@
+text,intent,entity_type,entity_value
+acaba arkadasimla burger hane onunde bulusacagiz yerini bilmiyorum,find_store,store,S20
+cocguma bir seyler bakacagim,recommend_category,category,çocuk giyim
+hocam sinema filmi oner evde izleerim,out_of_scope,,
+lütfen elazığ'da hava nasıl,out_of_scope,,
+hocam alışveriş mekezi akşam kaçta kapanır,opening_hours,,
+arkadasimla zamna sata onunde bulusacagiz yerini bilmiyorum,find_store,store,S29
+avm bu akam kça kadar hizmet veriyor??,opening_hours,,
+kolay gelsin yardim lzaim,greeting_help,,
+buggün lcivert giyim kaça kadar çalışıyor,opening_hours,store,S02
+ev dekor plus bu saatte hizmet veriyor mu.,opening_hours,store,S30
+bi sorabilir miyim merhabalar nasilsiniz??,greeting_help,,
+acaba canım tatlı çekti,recommend_category,category,tatlı
+kolay gelsin,greeting_help,,
+merhabalar naslısınız!,greeting_help,,
+bebek bezi değiştirme yeri tarafı hangisi acaba,find_facility,facility,bebek bakım odası
+kolay gelsin yardım lazım lütfen,greeting_help,,
+acaba namaz kılma yri yerini gösterir misiniz,find_facility,facility,mescit
+kahve bakmak istiyorum bir fikrin var mı,recommend_category,category,kahve
+pastane için iyi bir yer biliyor musun teşekkürler,recommend_category,category,tatlı
+alışveriş merkezi akşam kaçta kapanır,opening_hours,,
+pardon altın fiyatları ne kadar,out_of_scope,,
+iyi günler bu telefon kac gb,out_of_scope,,
+mrb,greeting_help,,
+kolay gelsin yardim lazim lütfen,greeting_help,,
+abi danisma masasi tarafi hangisi,find_facility,facility,danışma
+danisma masasi icin ne tarafa gideym yardım eder misin.,find_facility,facility,danışma
+park yeri bulamadım yardım eder misin,find_facility,facility,otopark
+danışma masası yerini gösterir misiniz?,find_facility,facility,danışma
+eyvallah,greeting_help,,
+ayakkabi numarasi nasli olculur?,out_of_scope,,
+arabami nereye park ederim,find_facility,facility,otopark
+çocuk giyim bakmak istiyorum bir fikrin var mı?,recommend_category,category,çocuk giyim
+bebegimi emzirmem gerekiyor,find_facility,facility,bebek bakım odası
+selamun aleykum??,greeting_help,,
+avm bu akasm kaca kadar hizmet veriyor,opening_hours,,
+urban cizgi nerelerde acaba,find_store,store,S04
+tabanlık için yönlendirir misin,find_store,store,S09
+mutak atölyesi iin ne tarafa yürümem lazım,find_store,store,S31
+kalem kırtasiye mesi saatleri nelerdir!,opening_hours,store,S16
+birinci katın planı var mı,floor_directory,floor,1
+acaba kayıp eşya için kime gideyim,find_facility,facility,danışma
+iyi günler kahve falı baktırır mısın,out_of_scope,,
+selamun aleykum,greeting_help,,
+fırın sepeti mesai saatleri nelerdir,opening_hours,store,S24
+ikinci kattki dukkanlari listeler misin,floor_directory,floor,2
+lahmacun nasııl yapılır!,out_of_scope,,
+1. kattaki dukanlari listeler misiin lütfen,floor_directory,floor,1
+abi buger hane icin yonlendirir miisin,find_store,store,S20
+selamun aleyküm.,greeting_help,,
+wc bulamadim lütfen.,find_facility,facility,tuvalet
+karnım çok aç?,recommend_category,category,yemek
+abest alıp namaz kılmak istiyorum yardım eder misin,find_facility,facility,mescit
+sade butik diye bir yer arıyorum,find_store,store,S03
+abi uykum var bir şey içmek istiyorum,recommend_category,category,kahve
+avm bu aksam kaca kadar hizmet veriyor,opening_hours,,
+lütfen mutfak atolyesi diye bir yer var miydi??,find_store,store,S31
+spor ayakkabi alacagim nereler iyi,recommend_category,category,ayakkabı
+avm bu aksam kaaca kadar hizmet veriyor,opening_hours,,
+ikinci kattaki dukkanlari listeler misin acaba,floor_directory,floor,2
+minik adimlar nerelerde acaba.,find_store,store,S05
+şehir market mesai saatleri nelerdir,opening_hours,store,S25
+lütfen sagolun,greeting_help,,
+birinci kattın planı var mı,floor_directory,floor,1
+2. kata çıkınca neler görürüm,floor_directory,floor,2
+burer hane için ne tarafa yürümem lazım,find_store,store,S20
+teknoloji durağı için ne tarafa yürümem lazım acaba.,find_store,store,S10
+firin sepeti aksam ack mi acaba,opening_hours,store,S24
+arkadaşımlla tabanlık önünde buluşacağız yerini blimiyorum?,find_store,store,S09
+mutfak atolyesi icin ne tarafa yurumem lazim,find_store,store,S31
+lütfen tesekkurler,greeting_help,,
+sinema filmi oner evde izlerim!,out_of_scope,,
+lütfen bi lavabo lazıım,find_facility,facility,tuvalet
+mrket alışverişi nasıl bütçelenir,out_of_scope,,
+teknoloji durağı mesai saatleri nelerdir,opening_hours,store,S10
+alisveris merkezi aksam kacta kapanir,opening_hours,,
+market alisverisi nasil butcelenir,out_of_scope,,
+zemin katin plani var mi acaba,floor_directory,floor,0
+giriş kattaki dükkanları listeler misin!,floor_directory,floor,0
+acaba sayfa kitbevi diye bir yer arriyorum,find_store,store,S15
+lütfen acıktım,recommend_category,category,yemek
+slm,greeting_help,,
+elektronik konusunda ne önerirsin,recommend_category,category,elektronik
+merhaba hosca kal,greeting_help,,
+elbise icin iyi bir yer biliyor musun acaba,recommend_category,category,giyim
+zmein kati gezemk istiyorum,floor_directory,floor,0
+bebegimin bezini degistirmem lazim!,find_facility,facility,bebek bakım odası
+abi spor giyim için iyi bir yer bilyor muusun,recommend_category,category,spor
+acaba yardımcı olabilir miiniz,greeting_help,,
+teknoloji duragi icin yonlendirir misin,find_store,store,S10
+birinci katı gezmek istiyorum,floor_directory,floor,1
+giyim konusudna ne onerirsin acaba,recommend_category,category,giyim
+bankamatik tarafi hangisi??,find_facility,facility,atm
+abi kahve fali baktirir misin?,out_of_scope,,
+kave molası mesai saatleri nelerdir,opening_hours,store,S22
+zemin kaıt gezmek istiyorum,floor_directory,floor,0
+mavi eczane dyie bir yer ariyorum teşekkürler?,find_store,store,S35
+bana bir şarkı söyle,out_of_scope,,
+park yeir tarfaı hangisi??,find_facility,facility,otopark
+1. kattaki dukkanlari listeler misin acaba!,floor_directory,floor,1
+avm bu aksam kaca kdar hizmet veriyor,opening_hours,,
+bu telefon kac gb,out_of_scope,,
+eczane için iyi bir yer biliyor musun,recommend_category,category,eczane
+alisveris merkezi aksam kacta kpaanir?,opening_hours,,
+lütfen hediye bakmak istiyorum bir fikrin var mı!,recommend_category,category,hediye
+birinci kata cikinca neler gorurrum yardım eder misin.,floor_directory,floor,1
+merhaba yemek yiyecek yer bakamk istiyorum bir fikrrin var mi,recommend_category,category,yemek
+birinci katın planı var mı yardım eder misin,floor_directory,floor,1
+nakit lazim nereden bulurum,find_facility,facility,atm
+kozmetik alacağım nereler iyi,recommend_category,category,kozmetik
+hediye sepeti için ne tarafa yürümem lazım,find_store,store,S27
+pardon canım tatlı çekti,recommend_category,category,tatlı
+elimi yıkamam lazım,find_facility,facility,tuvalet
+mutfak eşyası alacağım nereler iyi!,recommend_category,category,ev ve dekor
+bugün bit elektronik kaça kadar çalışıyor?,opening_hours,store,S11
+pardon teknoloji durağı akşam açık mı acaba,opening_hours,store,S10
+market konusunda ne onerirsin acaba,recommend_category,category,market
+zemin katın planı var mı,floor_directory,floor,0
+elazig'da hava nasil yardım eder misin!,out_of_scope,,
+ikinci katı gezmek istiyorum teşekkürler,floor_directory,floor,2
+hosca kal,greeting_help,,
+canim tatli cekkti,recommend_category,category,tatlı
+bi namaz kıma yeir lazım,find_facility,facility,mescit
+kolaay gelsin yardım lazım,greeting_help,,
+telefon dünyası diye bir yer var mıydı acaba??,find_store,store,S12
+altin fiyatlari ne kadar,out_of_scope,,
+sagolun?,greeting_help,,
+lahmacun nasil yapilir teşekkürler,out_of_scope,,
+merhaba ikinci katin plani var mi??,floor_directory,floor,2
+burger hane bu saatte hizmet verioyr mu acaba,opening_hours,store,S20
+mutak atolyesi asam acik mi acaba,opening_hours,store,S31
+1. kata çıkınca neller görürüm,floor_directory,floor,1
+atm bulamadım,find_facility,facility,atm
+2. katı gezmek istiyoorum!,floor_directory,floor,2
+dekorasyon bakmak istiyorum bir fikrin var mı,recommend_category,category,ev ve dekor
+lütfen 2. kati gezmek istiyorm,floor_directory,floor,2
+pardon tabanlik iin ne tarafa yurumem lazim,find_store,store,S09
+mutfak atolyesi tarafina nasil gecerim,find_store,store,S31
+lahmacun evi diye bir yer var mıydı acaba,find_store,store,S18
+elazigda hava nasil,out_of_scope,,
+kitap yazarı kim,out_of_scope,,
+bi asansor lazim,find_facility,facility,asansör
+restoran alacağım nereler iyi,recommend_category,category,yemek
+pardon 2. katin plani var mi,floor_directory,floor,2
+1. kattaki dukkanlari listeler misin lütfen??,floor_directory,floor,1
+bebeğimin bezini değiştirmem lazım,find_facility,facility,bebek bakım odası
+merhabalar nasılsınız,greeting_help,,
+bi sorabilir miyim 1. kattaki dükkanları listeler misin??,floor_directory,floor,1
+abi firin sepeti mesai saatleri nleerdir!,opening_hours,store,S24
+burger hane icin yonlendirir misin,find_store,store,S20
+saat kaç şu an,out_of_scope,,
+aroma kozmetik mesai saatleri nelerdir lütfen??,opening_hours,store,S14
+kavhe falı baktırır mısın,out_of_scope,,
+arkadaşımla tatıl köşe önünde buluşacğaız yerini bilmiyorum.,find_store,store,S21
+acaba bu telefon kaç gb.,out_of_scope,,
+abi arkadaşıma doğum günü için bir şey alacağım,recommend_category,category,hediye
+acaba merhabalar nasilsiniz,greeting_help,,
+yardımcı olabilir misiniz,greeting_help,,
+arkadaşıma doğum günü iin bir şey alacağım?,recommend_category,category,hediye
+telefon dünyası nerelerde acaba,find_store,store,S12
+para cekmem gerekiyor,find_facility,facility,atm
+hediye sepeti akşam açık mı acaba teşekkürler.,opening_hours,store,S27
+lütfen iinci kattaki dükkanları listeler misin.,floor_directory,floor,2
+mrb?,greeting_help,,
+yardımcı olabilir misiniz!,greeting_help,,
+minik adimlar icin ne tarafa yuurumem laizm,find_store,store,S05
+ayakkabı numarası nasıl ölçülür,out_of_scope,,
+iyi günler saat kac su an,out_of_scope,,
+telefon dünyası için yönlendirir misin,find_store,store,S12
+lütfen kitap yazarı kim,out_of_scope,,
+tabanlık nerelerde acaba,find_store,store,S09
+bugun keap sarayi kaca kadar calisiyor,opening_hours,store,S17
+abi kosu atolyesi icin ne tarafa yurumem lazim,find_store,store,S06
+giriş kata çıkınca neler görürüm,floor_directory,floor,0
+giris katin plani var mi??,floor_directory,floor,0
+giriş kata çıkınca nleer görürüm,floor_directory,floor,0
+acaba merhabalar nasilsiniz!,greeting_help,,
+hediye sepeti aksam acik mi acaba,opening_hours,store,S27
+cok sikistim nereye gdeyim??,find_facility,facility,tuvalet
+bi sorabilir miyim zaman sat mesai saatleri nelerrdir,opening_hours,store,S29
+tatli kose mesai saatleri nleerdir,opening_hours,store,S21
+merhaba sinema filmi onr evde izlerim,out_of_scope,,
+hocam selamun aleyküm,greeting_help,,
+abdest alıp namza kımlak istiyorum,find_facility,facility,mescit
+kahve fali baktirir misin,out_of_scope,,
+bebeğimi emzirmem gerekiyor,find_facility,facility,bebek bakım odası
+bi namaz odasi lazm,find_facility,facility,mescit
+lütfen merhabalar nasilsiniz??,greeting_help,,
+koşşu atölesi akşam aççık mı acaba,opening_hours,store,S06
+wc tarafı hangisi??,find_facility,facility,tuvalet
+oyun kulesi aksaam acik mi acaba.,opening_hours,store,S33
+selamun aleykum!,greeting_help,,
+merhaba alışveriş merkezi akşam kaçta kaapnır.,opening_hours,,
+bit elektronik icin yonlendirir misin,find_store,store,S11
+abi kolay gelsin,greeting_help,,
+merhaba eyvallah,greeting_help,,
+abi kırtasiye konusunda ne önerirsin,recommend_category,category,kitap
+abi burger hane tarafna nasil gecerim,find_store,store,S20
+hocam tesekkurler,greeting_help,,
+lahmacun nasil yapilir yardım eder misin,out_of_scope,,
+bebek bezi değiştirme yeri yerini göstreir misiniz teşekkürler,find_facility,facility,bebek bakım odası
+canmi tatli cekti lütfen,recommend_category,category,tatlı
+slm?,greeting_help,,
+bu telefon kac gb??,out_of_scope,,
+tesekkurler.,greeting_help,,
+2. katın planı var mı,floor_directory,floor,2
+elimi yikamam lazim lütfen,find_facility,facility,tuvalet
+adim ayakkabi bu saatte hizmet veriyor mu??,opening_hours,store,S08
+2. katı gezmek istiyorum,floor_directory,floor,2
+selamun aleyküm lütfen,greeting_help,,
+arkdaşımla lacivert giyim önünde bulluşacağız yerini bilmiyorum,find_store,store,S02
+taki icin iyi bir yer biiliyor muun acaba,recommend_category,category,mücevher
+lütfen atm yerini gosterir misiniz?,find_facility,facility,atm
+bi sorabilir miyim moda sokagi aksam acik mi acaba,opening_hours,store,S01
+lütfen kalem kirtasiye diye bir yer var miydi,find_store,store,S16
+merhabalar nasılsınız.,greeting_help,,
+mutfak eşyası alacağım nereler iyi?,recommend_category,category,ev ve dekor
+otopark için ne tarafa gideyyim??,find_facility,facility,otopark
+2. kata cikinca neler gorrum,floor_directory,floor,2
+spor malzemesi konusunda ne onerirsin.,recommend_category,category,spor
+selammun aleyküm,greeting_help,,
+çay bahçesi nerelerde acaba,find_store,store,S23
+hocam kahve falı baktırır mısın,out_of_scope,,
+teknoloji durağı tarafına nasıl geçeirm lütfen,find_store,store,S10
+zemin kata çıkınca neler görürüm,floor_directory,floor,0
+giris kata cikica neler gorurum,floor_directory,floor,0
+kitap yazarı kim?,out_of_scope,,
+pardon kanrim cok ac,recommend_category,category,yemek
+dekorasyon icin iyi bir yer biliyor musun,recommend_category,category,ev ve dekor
+parfüm için iyi bir yer biliyor musn,recommend_category,category,kozmetik
+abi altin kosk bu saatte hizmet veriyor mu??,opening_hours,store,S28
+danışma tarafı hangisi,find_facility,facility,danışma
+kahve baakmak istiyorum bir fikrin var mi?,recommend_category,category,kahve
+tabanlık içni ne tarafa yürümem lazım,find_store,store,S09
+moda sokağı için ne tarafa yürümem lazıım,find_store,store,S01
+danisma icin ne tarafa gideymi,find_facility,facility,danışma
+çanta için iyi bir yer biliyor musun?,recommend_category,category,çanta
+abi zaman saat mesai saatleri nelerdir,opening_hours,store,S29
+arkadasimla firin sepeti onunde bulusacagiz yerini bilmiyorum,find_store,store,S24
+hocam 2. kata çıkınca neler görürüm,floor_directory,floor,2
+iyi günler para çekmem gereiyor,find_facility,facility,atm
+market alışverişi nasıl bütçelenir,out_of_scope,,
+hocam avm bu akşam kça kaadar hizmet veriyor,opening_hours,,
+saat kac su an,out_of_scope,,
+bi sorabilir miyim selamun aleykum,greeting_help,,
+hocam kitap yazari kim,out_of_scope,,
+danışma masası yerini gösterir misiniz,find_facility,facility,danışma
+kahve fli baktirir misin,out_of_scope,,
+merhaba abdest alip namaz kilmak istiyorum,find_facility,facility,mescit
+pardon dekorasyon bakmak istiyorum bir fikrin var mı??,recommend_category,category,ev ve dekor
+lift tarafi hangisi acaba,find_facility,facility,asansör
+sinema filmi oner evde izlerim teşekkürler??,out_of_scope,,
+2. katin plani var mi.,floor_directory,floor,2
+acaba ayakkabi numarasi nasil olculur!,out_of_scope,,
+gris kaitn plani var mi yardım eder misin??,floor_directory,floor,0
+minik adimlar tarafina nasil gecerim teşekkürler,find_store,store,S05
+pardon selamun aleykum??,greeting_help,,
+ikinci katı gezmek istiyorum lütfen.,floor_directory,floor,2
+birinci kattaki dükkanları listeler misin!,floor_directory,floor,1
+tuvalet bulamadim,find_facility,facility,tuvalet
+hocam namaz kilacagim uygun bir yer var mi,find_facility,facility,mescit
+eyvallah??,greeting_help,,
+lahmacun nasıl yapılır,out_of_scope,,
+telefon dunyasi neresi yardim eder misiniz,find_store,store,S12
+giriş kaatı gezmek istiyorum,floor_directory,floor,0
+birinci kattaki dukkanlari listeler misin!,floor_directory,floor,1
+lahmacun nasil yapilir,out_of_scope,,
+hediye sepeti bu saatte hizmet veriyor mu,opening_hours,store,S27
+avm bu akşam kaça kadar hizmet veriyor,opening_hours,,
+lütfen zaman saat bu saatte hiizmet veriyor mu,opening_hours,store,S29
+canim tatli cekti,recommend_category,category,tatlı
+kitap alacagim nereler iyi lütfen,recommend_category,category,kitap
+merhabalar nasilssiniz,greeting_help,,
+spor durağı akşam açık mı acaba,opening_hours,store,S07
+ayakkabi numarasi nasil olculur,out_of_scope,,
+koşu atölyesi diye bir yer arıyorum lütfen,find_store,store,S06
+ikinci katin plani var mi teşekkürler??,floor_directory,floor,2
+namaz odasi bualmadim,find_facility,facility,mescit
+bir şeyler atıştıracağım,recommend_category,category,yemek
+sinema filmi öner evde izlerim,out_of_scope,,
+çocuğuma bir şeyler bakacağım,recommend_category,category,çocuk giyim

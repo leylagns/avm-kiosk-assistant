@@ -1,0 +1,28 @@
+{
+  "best_C": 1,
+  "val_macro_f1": 1.0,
+  "majority_acc_hard": 0.14285714285714285,
+  "test": {
+    "intent_acc": 1.0,
+    "intent_macro_f1": 1.0,
+    "entity_acc": 0.9742268041237113,
+    "end_to_end_acc": 0.9821428571428571,
+    "latency_mean_ms": 2.119700678572047,
+    "latency_p95_ms": 5.254931249988459,
+    "n": 280
+  },
+  "test_hard": {
+    "intent_acc": 0.6642857142857143,
+    "intent_macro_f1": 0.6731453862025895,
+    "entity_acc": 0.601063829787234,
+    "end_to_end_acc": 0.6214285714285714,
+    "latency_mean_ms": 3.0932248250001595,
+    "latency_p95_ms": 7.117981600002567,
+    "n": 280
+  },
+  "targets": {
+    "intent_macro_f1_hard": 0.85,
+    "entity_acc_hard": 0.85,
+    "p95_latency_ms": 500.0
+  }
+}

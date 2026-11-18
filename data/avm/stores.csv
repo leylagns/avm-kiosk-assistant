@@ -1,0 +1,37 @@
+store_id,name,category,floor,zone,opening_hours
+S01,Moda Sokağı,giyim,0,A,10:00-22:00
+S02,Lacivert Giyim,giyim,0,A,10:00-22:00
+S03,Sade Butik,giyim,1,B,10:00-22:00
+S04,Urban Çizgi,giyim,1,B,10:00-22:00
+S05,Minik Adımlar,çocuk giyim,1,C,10:00-22:00
+S06,Koşu Atölyesi,spor,0,B,10:00-22:00
+S07,Spor Durağı,spor,2,A,10:00-22:00
+S08,Adım Ayakkabı,ayakkabı,0,C,10:00-22:00
+S09,Tabanlık,ayakkabı,1,A,10:00-22:00
+S10,Teknoloji Durağı,elektronik,2,B,10:00-22:00
+S11,Bit Elektronik,elektronik,2,C,10:00-22:00
+S12,Telefon Dünyası,elektronik,0,C,10:00-22:00
+S13,Güzellik Bahçesi,kozmetik,0,B,10:00-22:00
+S14,Aroma Kozmetik,kozmetik,1,A,10:00-22:00
+S15,Sayfa Kitabevi,kitap,2,A,10:00-22:00
+S16,Kalem Kırtasiye,kitap,2,A,10:00-21:00
+S17,Kebap Sarayı,yemek,2,C,10:00-23:00
+S18,Lahmacun Evi,yemek,2,C,10:00-23:00
+S19,Pizza Fırını,yemek,2,B,10:00-23:00
+S20,Burger Hane,yemek,2,B,10:00-23:00
+S21,Tatlı Köşe,tatlı,2,B,10:00-23:00
+S22,Kahve Molası,kahve,0,A,09:00-23:00
+S23,Çay Bahçesi,kahve,1,C,09:00-23:00
+S24,Fırın Sepeti,tatlı,0,B,09:00-22:00
+S25,Şehir Market,market,0,C,09:00-23:00
+S26,Oyuncak Adası,oyuncak,1,C,10:00-22:00
+S27,Hediye Sepeti,hediye,1,B,10:00-22:00
+S28,Altın Köşk,mücevher,0,A,10:00-22:00
+S29,Zaman Saat,mücevher,1,A,10:00-22:00
+S30,Ev Dekor Plus,ev ve dekor,1,A,10:00-22:00
+S31,Mutfak Atölyesi,ev ve dekor,1,B,10:00-22:00
+S32,Yıldız Sinema,eğlence,2,C,10:00-24:00
+S33,Oyun Kulesi,eğlence,2,C,10:00-24:00
+S34,Optik Bakış,optik,0,B,10:00-22:00
+S35,Mavi Eczane,eczane,0,A,09:00-23:00
+S36,Derin Bavul,çanta,1,C,10:00-22:00

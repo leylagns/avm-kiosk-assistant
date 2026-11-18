@@ -1,0 +1,281 @@
+text,intent,entity_type,entity_value
+koşu atölyesi bulmak istiyorum,find_store,store,S06
+mutfak eşyası var mı burada?,recommend_category,category,ev ve dekor
+odevimi yap!,out_of_scope,,
+otobüs kaçta gçeer,out_of_scope,,
+tabanlık kaça kadar çalışıyor yardım eder misin,opening_hours,store,S09
+derin bavl yol tarifi,find_store,store,S36
+merhaba koşu atölyesi kaça kadar açık?,opening_hours,store,S06
+hey lütfen,greeting_help,,
+avm çalışma saatleri neddir??,opening_hours,,
+abi alışveriş merkezi çalışma saatleri,opening_hours,,
+iyi akşamlar acaba??,greeting_help,,
+cay icin hangi magazalar var!,recommend_category,category,kahve
+yardim teşekkürler,greeting_help,,
+acaba selamlar,greeting_help,,
+bebek bezi değiştirme yeri nasıl buluum,find_facility,facility,bebek bakım odası
+tesekkur ederim?,greeting_help,,
+mescit nerde??,find_facility,facility,mescit
+burada spor giyim bulabilir miyim,recommend_category,category,spor
+spor giyim için nereye gitmeliyim,recommend_category,category,spor
+spor durağı kaçta açılıyor,opening_hours,store,S07
+abi en iyi telefon hanisi!,out_of_scope,,
+turkiye nufussu kac,out_of_scope,,
+merhaba tesekkur ederim!,greeting_help,,
+hocam iyi akşamlar.,greeting_help,,
+para cekme makinesi nerde,find_facility,facility,atm
+bebek bezi değiştirme yeri nede lütfen??,find_facility,facility,bebek bakım odası
+para çekme makinesi nerrede,find_facility,facility,atm
+atm var mı.,find_facility,facility,atm
+iyi günler yardım eder misin.,greeting_help,,
+pardon otobus kacta gecer,out_of_scope,,
+araç parkı hangi katta,find_facility,facility,otopark
+bana kozmetik goster,recommend_category,category,kozmetik
+emzirme odasi var mi,find_facility,facility,bebek bakım odası
+pardon merhaba,greeting_help,,
+urban çizgi kaçta açılıyor yardım eder misin,opening_hours,store,S04
+optik bakış yol tarifi,find_store,store,S34
+lahmaacun evi nasıl gidilir,find_store,store,S18
+tatlı köşe yol tarifi,find_store,store,S21
+lütfen adım ayakkabı şu an açık mı,opening_hours,store,S08
+1. katta neler var??,floor_directory,floor,1
+tuvaleti nerede acaba??,find_facility,facility,tuvalet
+pardon en yakin hastane nerede,out_of_scope,,
+bana yardımccı olur musun,greeting_help,,
+oyuncak adasi kaa kadar calisiyor teşekkürler??,opening_hours,store,S26
+1. ktata neler var.,floor_directory,floor,1
+merhaba ankara'ya nasıl gidilir,out_of_scope,,
+hocam giris katta ne var,floor_directory,floor,0
+sade butik mağazası nerede,find_store,store,S03
+iyi günler dilerim??,greeting_help,,
+en yakin arac parki nerede,find_facility,facility,otopark
+çocuk kıyafeti önerir misin,recommend_category,category,çocuk giyim
+en yakın araç parkı nereye,find_facility,facility,otopark
+lütfen tatlı köşe nerede.,find_store,store,S21
+pastane tavsiye eder misin,recommend_category,category,tatlı
+alisveris merkezi calisma saatleri?,opening_hours,,
+minik adımlar yol tarifi.,find_store,store,S05
+makyaj malzemesi tavsiye eder misin,recommend_category,category,kozmetik
+koşu atölyesi çalışma saatleri,opening_hours,store,S06
+iyi günler 2. kat rehberi,floor_directory,floor,2
+aroma kozmetik konumu,find_store,store,S14
+tabanlik saat kacta kapaniyor,opening_hours,store,S09
+iyi günler dilerim acaba,greeting_help,,
+hocam 2. kattai mağazalar?,floor_directory,floor,2
+2. kattaki magazalar.,floor_directory,floor,2
+urban çizgi nerde?,find_store,store,S04
+tabanlık hangi katta,find_store,store,S09
+adım ayakkabı açık mı,opening_hours,store,S08
+lütfen kebap sarayi neresi,find_store,store,S17
+oyuncak adası bulmak istiyorum.,find_store,store,S26
+günaydın yardım eder misin.,greeting_help,,
+hocam kargo takibi yap,out_of_scope,,
+danisma masasi nerde?,find_facility,facility,danışma
+kaç yaşındasın??,out_of_scope,,
+sayfa kitabevi kaça kadar açk,opening_hours,store,S15
+merhaba lacivert giyim saat kaçta kapanıyor,opening_hours,store,S02
+pardon bugun mac kacta,out_of_scope,,
+2. katta ne var acaba,floor_directory,floor,2
+1. kattaki mağazalar?,floor_directory,floor,1
+urban çizgi yol tarifi,find_store,store,S04
+kahveci önerir misin,recommend_category,category,kahve
+selmlar,greeting_help,,
+hocam spor malzemesi tavsiye eder misin,recommend_category,category,spor
+hey acaba,greeting_help,,
+sat için nereye gitmeliim lütfen??,recommend_category,category,mücevher
+pardon giriş kat haritaı,floor_directory,floor,0
+lift nasıl bulurum,find_facility,facility,asansör
+iyi günler pastane icin hangi magazalar var,recommend_category,category,tatlı
+bi sorabilir miyim selam,greeting_help,,
+aroma kozmetik neresi,find_store,store,S14
+ikinci katta hangi mağazalar var?,floor_directory,floor,2
+telefon tavsiye eder misin??,recommend_category,category,elektronik
+araç parkı nasıl bulurum,find_facility,facility,otopark
+abi bana fikra anlat?,out_of_scope,,
+mutfak atölyesi çalışma saatleri,opening_hours,store,S31
+merhaba 1. kat rehberi,floor_directory,floor,1
+fırın sepeti nerede,find_store,store,S24
+kaç yaşındasın yardım eder misin?,out_of_scope,,
+mesit nerede,find_facility,facility,mescit
+ikicni kat magazalari,floor_directory,floor,2
+optik bakis saat kcta kapaniyor,opening_hours,store,S34
+ankara'ya nasıl gidilir lütfen?,out_of_scope,,
+kirtasiye ariyorum,recommend_category,category,kitap
+pizza fırını kaça kadar açık,opening_hours,store,S19
+sinema için hangi mağazalar var.,recommend_category,category,eğlence
+1. kattaki magaazalar??,floor_directory,floor,1
+bana pastane göster lütfen,recommend_category,category,tatlı
+birinci katta neler var?,floor_directory,floor,1
+en yakın park yeri nereye?,find_facility,facility,otopark
+çanta için hangi mağazalar var,recommend_category,category,çanta
+kahve molası nerede?,find_store,store,S22
+spor giyim icin hangi magazalar var,recommend_category,category,spor
+lütfen en yakın otopark nereye?,find_facility,facility,otopark
+mutfak eşysaı arıyorum,recommend_category,category,ev ve dekor
+yildiz sinema calisma saaatleri acaba,opening_hours,store,S32
+oyuncak adası açık mı.,opening_hours,store,S26
+bana market göster yardım eder misin,recommend_category,category,market
+birinci kat rehberi??,floor_directory,floor,1
+lütfen bitcoin ne kadar?,out_of_scope,,
+giriş katta ne var?,floor_directory,floor,0
+selamlar acaba,greeting_help,,
+kahve tavsiye eder misin,recommend_category,category,kahve
+bebek bakım odası nerede,find_facility,facility,bebek bakım odası
+gorusuruz??,greeting_help,,
+altın köşk bulmak istiyorum,find_store,store,S28
+hava durumu nasıl?,out_of_scope,,
+abi iyi gunler!,greeting_help,,
+bugun gunlerden ne.,out_of_scope,,
+zemin katta hangi mağazalar var??,floor_directory,floor,0
+iyi günler avm kaca kadar acik,opening_hours,,
+urban çizgi saat kaçta kapanıyor,opening_hours,store,S04
+birinci kat mağazaları yardım eder misin!,floor_directory,floor,1
+en yaıkn namaz kılma yeri nereye?,find_facility,facility,mescit
+birinci kat rehberi!,floor_directory,floor,1
+burada ayakkabı bulabilir miyim teşekkürler.,recommend_category,category,ayakkabı
+acaba ikinci katta neler var,floor_directory,floor,2
+minik adımlar yol tarifi,find_store,store,S05
+lacivert giyim bulmak istiyorum yardım eder misin,find_store,store,S02
+ev dekor plus nerede,find_store,store,S30
+pizza tariif ver??,out_of_scope,,
+bugün gülnerden ne,out_of_scope,,
+bi sorabilir miyim namaz kılma yeri hangi katta,find_facility,facility,mescit
+altin tavsiye eder misin lütfen,recommend_category,category,mücevher
+2. katta hangi magazalar var!,floor_directory,floor,2
+acaba giiş katta hangi mağazalar var,floor_directory,floor,0
+lavabo arıyorum,find_facility,facility,tuvalet
+teşekkürler yardım eder misin,greeting_help,,
+1. kat haritası.,floor_directory,floor,1
+moda sokagi kaca kadar calisiyor teşekkürler,opening_hours,store,S01
+bit elektronik nerede,find_store,store,S11
+piza tarifi ver,out_of_scope,,
+sayfa kitabevi kaça kadar aık,opening_hours,store,S15
+otobüs kaçta geçer!,out_of_scope,,
+iyi günler teknoloji duragi nasil gidilir?,find_store,store,S10
+bana fikra anlat!,out_of_scope,,
+çay için nereye gidebilirim,recommend_category,category,kahve
+hocam sağ ol.,greeting_help,,
+iyi günler günaydın,greeting_help,,
+çocuk kıyafeti için nereye gitmeliyim.,recommend_category,category,çocuk giyim
+mavi eczane yol tarifi,find_store,store,S35
+emzirme odası nerde??,find_facility,facility,bebek bakım odası
+sade butik sata kacta kapaniyor,opening_hours,store,S03
+ikinci katta neler var lütfen,floor_directory,floor,2
+bi sorabilir miyim iyi akşamlar,greeting_help,,
+merhaba yardim eder misin.,greeting_help,,
+tabanlik hangi katta,find_store,store,S09
+merhaba en yakin hastane nerrede,out_of_scope,,
+en yakın hastane nerede?,out_of_scope,,
+çay bahçesi nerde,find_store,store,S23
+iyi günler otobüs kaçta geçer.,out_of_scope,,
+oyun kulesi magazasina nail gderim!,find_store,store,S33
+moda sokagi kaca kadar acik,opening_hours,store,S01
+acaba optik bakis yol tarifi,find_store,store,S34
+1. kat haritasi!,floor_directory,floor,1
+lütfen 1. katta neler var!,floor_directory,floor,1
+giiriş katatki mağazalar yardım eder misin,floor_directory,floor,0
+nasilsin acaba,greeting_help,,
+altın köşk saat kaçta kapanıyor??,opening_hours,store,S28
+danışma masassı hangi katta,find_facility,facility,danışma
+tatlı köşe kaça kadar açık,opening_hours,store,S21
+pardon burger hane kacta aciliyor,opening_hours,store,S20
+pizza tairfi ver acaba??,out_of_scope,,
+görüşürüz??,greeting_help,,
+araç parkı yolunu tarif eder misin,find_facility,facility,otopark
+ankara'ya nasıl gidilir acaba,out_of_scope,,
+otopark neerde,find_facility,facility,otopark
+mescit nerde,find_facility,facility,mescit
+bana yardimci olur musuun.,greeting_help,,
+avm çalışma saalteri nedir,opening_hours,,
+bebek bzi değiştirme yeri nasıl bulurum?,find_facility,facility,bebek bakım odası
+yildiz sinema kaca kadar acik,opening_hours,store,S32
+nasılsın lütfen,greeting_help,,
+bit elektronik saat kaçta kapanıyor,opening_hours,store,S11
+abi yildiz sinema konumu,find_store,store,S32
+sag ol.,greeting_help,,
+lütfen baan yardımcı olur musun!,greeting_help,,
+abi tatlı önerir misin?,recommend_category,category,tatlı
+fırın sepeti yol tarifi,find_store,store,S24
+nasilsin!,greeting_help,,
+kargo takibi yap yardım eder misin,out_of_scope,,
+park yeri nasıl bulurum teşekkürler.,find_facility,facility,otopark
+hediye var mi burada,recommend_category,category,hediye
+selam teşekkürler,greeting_help,,
+buugn gunlerden ne yardım eder misin!,out_of_scope,,
+merhaba yardim eder misin??,greeting_help,,
+giriş kat rehbberi,floor_directory,floor,0
+tuvaleti nerede,find_facility,facility,tuvalet
+şehir market kaça kadar açık,opening_hours,store,S25
+giriş katta ne var!,floor_directory,floor,0
+tesekkurler?,greeting_help,,
+mutfak atölyesi mağazasına gitmek istiyorum,find_store,store,S31
+yemek yiyecek yer var mi burada,recommend_category,category,yemek
+en yakın tuvaleti nreeye,find_facility,facility,tuvalet
+tatlı köşe saat kaçta kapanıyor?,opening_hours,store,S21
+bi sorabilir miyim oynu kulesi mağazası neree,find_store,store,S33
+sag ol?,greeting_help,,
+acaba spor giyim için hangi mağazalar var,recommend_category,category,spor
+en yakın wc nerede!,find_facility,facility,tuvalet
+acaba zemin katta ne var?,floor_directory,floor,0
+hocam bana lokanta goster,recommend_category,category,yemek
+ne yapabilirsin acaba.,greeting_help,,
+hediye sepei yol tarifi lütfen,find_store,store,S27
+kagro takibi yap,out_of_scope,,
+merhaba teknoloji durağı nasıl gidilir?,find_store,store,S10
+giriş kattaki mağazlar acaba??,floor_directory,floor,0
+acaba zemin katta hangi mağazalar var.,floor_directory,floor,0
+bana siir yaz acaba??,out_of_scope,,
+iyi günler elbise önerir misin,recommend_category,category,giyim
+kıyafet tavsiye eder misin!,recommend_category,category,giyim
+telefon için nereye gitmeliyim,recommend_category,category,elektronik
+hocam avm kaca kadar acik,opening_hours,,
+danışma arıyorum acaba,find_facility,facility,danışma
+bana saat göster,recommend_category,category,mücevher
+derin bavul hangi katta,find_store,store,S36
+oyuncak adası mağazasına nasıl giderim yardım eder misin,find_store,store,S26
+tuvaleti var mi,find_facility,facility,tuvalet
+bilgisayar icin nereye gitmeliyim,recommend_category,category,elektronik
+bi sorabilir miyim sayfa kitabevi çalışma saatleri,opening_hours,store,S15
+moda sokagi yol tarifi,find_store,store,S01
+lütfen giriş katta ne var,floor_directory,floor,0
+iyi günler tuvaleti hangi katta,find_facility,facility,tuvalet
+lütfen uçak bileti bul,out_of_scope,,
+lahmacun evi kacta aciliyor,opening_hours,store,S18
+ankara'ya nasil gidilir teşekkürler,out_of_scope,,
+bi sorabilir miyim sağ ol?,greeting_help,,
+merhaba en iyi telefon hangisi?,out_of_scope,,
+lütfen namaz odasi yolunu tarif edeer misin??,find_facility,facility,mescit
+bi sorabilir miyim bitcoin ne kadar!,out_of_scope,,
+danisma masasi var mi,find_facility,facility,danışma
+merhaba spor ayakkabı tavsiye eder misin.,recommend_category,category,ayakkabı
+lift var mı??,find_facility,facility,asansör
+en yakın hastane nerede!,out_of_scope,,
+acaba giriş katta hangi mağazalar var,floor_directory,floor,0
+hocam otobüs kaçta geçer,out_of_scope,,
+merhaba giriş kat mağazaları,floor_directory,floor,0
+iyi günler lahmacun evi konumu.,find_store,store,S18
+selam lütfen,greeting_help,,
+lütfen 1. kat mağazaları,floor_directory,floor,1
+zemni kat rehberi yardım eder misin?,floor_directory,floor,0
+tuvalet yolunu tarif eder misin,find_facility,facility,tuvalet
+para çekme makinesi nerede,find_facility,facility,atm
+bi sorabilir miyim merhaba yrdım eder misiin,greeting_help,,
+bana fıkra anlat teşekkürler!,out_of_scope,,
+urban çizgi neresi?,find_store,store,S04
+zemin katta hangi magazalr var,floor_directory,floor,0
+iyi günler birinci kat haritasi,floor_directory,floor,1
+yarın yağmur yağacak mı yardım eder misin,out_of_scope,,
+tabanlık çalışma saatleri,opening_hours,store,S09
+teknoloji durağı açık mı,opening_hours,store,S10
+firin sepeti calisma saatleri acaba,opening_hours,store,S24
+çocuk giyim tavsiye eder misin!,recommend_category,category,çocuk giyim
+elektronik var mı burada.,recommend_category,category,elektronik
+teşekkürler!,greeting_help,,
+şehir market kaçta açılıyor,opening_hours,store,S25
+türkiye nüfusu kaç acaba.,out_of_scope,,
+hediye sepeti nasil gidilir lütfen!,find_store,store,S27
+iyi günler ikinci kattaki mağazalar,floor_directory,floor,2
+en yakin lavabo nereye,find_facility,facility,tuvalet
+acaba oyuncak var mı burada,recommend_category,category,oyuncak
+otobüs kaçta geçer??,out_of_scope,,
+bana canta goster.,recommend_category,category,çanta
