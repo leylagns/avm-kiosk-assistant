@@ -31,9 +31,12 @@ def set_seed(seed: int):
 
 class BertNLU:
     def __init__(self, model_name: str = DEFAULT_MODEL, max_len: int = 48, epochs: int = 4,
-                 lr: float = 3e-5, batch_size: int = 32, seed: int = 42, device: str | None = None):
+                 lr: float = 3e-5, batch_size: int = 32, seed: int = 42, device: str | None = None,
+                 entity_epochs: int = 15, entity_lr: float = 5e-5):
         self.model_name, self.max_len, self.epochs = model_name, max_len, epochs
         self.lr, self.batch_size, self.seed = lr, batch_size, seed
+        # varlık başı ~70 sınıflı olduğundan niyet başından daha uzun eğitim ister (4 epoch'ta loss ~2.3'te kalıyordu)
+        self.entity_epochs, self.entity_lr = entity_epochs, entity_lr
         self.device = device or ("cuda" if torch.cuda.is_available() else "cpu")
         self.tok = AutoTokenizer.from_pretrained(model_name)
         self.intent_model = None
@@ -45,7 +48,8 @@ class BertNLU:
         enc = self.tok(list(texts), truncation=True, max_length=self.max_len, padding="max_length", return_tensors="pt")
         return enc["input_ids"], enc["attention_mask"]
 
-    def _train_head(self, texts, labels, label_list, name):
+    def _train_head(self, texts, labels, label_list, name, epochs=None, lr=None):
+        epochs, lr = epochs or self.epochs, lr or self.lr
         set_seed(self.seed)
         label_to_id = {l: i for i, l in enumerate(label_list)}
         y = torch.tensor([label_to_id[l] for l in labels])
@@ -53,10 +57,10 @@ class BertNLU:
         loader = DataLoader(TensorDataset(ids, mask, y), batch_size=self.batch_size, shuffle=True)
         model = AutoModelForSequenceClassification.from_pretrained(self.model_name, num_labels=len(label_list))
         model.to(self.device).train()
-        opt = torch.optim.AdamW(model.parameters(), lr=self.lr, weight_decay=0.01)
-        total = len(loader) * self.epochs
+        opt = torch.optim.AdamW(model.parameters(), lr=lr, weight_decay=0.01)
+        total = len(loader) * epochs
         sched = get_linear_schedule_with_warmup(opt, int(0.1 * total), total)
-        for ep in range(self.epochs):
+        for ep in range(epochs):
             running = 0.0
             for b_ids, b_mask, b_y in loader:
                 b_ids, b_mask, b_y = b_ids.to(self.device), b_mask.to(self.device), b_y.to(self.device)
@@ -65,7 +69,7 @@ class BertNLU:
                 torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)
                 opt.step(); sched.step(); opt.zero_grad()
                 running += out.loss.item()
-            print(f"[{name}] epoch {ep + 1}/{self.epochs}  loss={running / len(loader):.4f}")
+            print(f"[{name}] epoch {ep + 1}/{epochs}  loss={running / len(loader):.4f}")
         model.eval()
         return model
 
@@ -75,7 +79,8 @@ class BertNLU:
         ent = df[df.entity_type.notna()]
         labels = [f"{t}:{v}" for t, v in zip(ent.entity_type, ent.entity_value.astype(str))]
         self.entity_labels = sorted(set(labels))
-        self.entity_model = self._train_head(ent.text, labels, self.entity_labels, "varlık")
+        self.entity_model = self._train_head(ent.text, labels, self.entity_labels, "varlık",
+                                        epochs=self.entity_epochs, lr=self.entity_lr)
         return self
 
     # ---------- çıkarım ----------
