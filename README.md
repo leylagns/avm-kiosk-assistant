@@ -50,3 +50,7 @@ Veri **sentetiktir** (şablon + gürültü, seed=42). Asıl ölçüt `test_hard`
 | test_hard | 0.664 | 0.601 |
 
 Ayrıntılar: [docs/week3/baseline-report.md](docs/week3/baseline-report.md)
+
+## Web arayüzü
+
+Çalışan kod: [`web/`](web) (kurulum ve açıklama: [web/README.md](web/README.md)). GitHub Pages açıkken canlı adres: https://leylagns.github.io/avm-kiosk-assistant/
