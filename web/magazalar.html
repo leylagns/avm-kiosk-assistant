@@ -1,0 +1,27 @@
+<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AVM Rehber · Mağazalar</title><link rel="stylesheet" href="css/style.css"></head>
+<body><div id="nav"></div>
+<main class="wrap">
+  <div style="display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap"><div><h1>Mağazalar ve tesisler</h1><span class="mut" id="cnt"></span></div>
+  <input id="s" class="field" style="margin:0;padding:12px 16px;border:1px solid var(--line);border-radius:12px;width:380px;max-width:100%;background:#fff" placeholder="Mağaza veya tesis ara…" aria-label="Ara"></div>
+  <div class="filters"><div class="grp"><small>Kat</small><span id="fk" style="display:contents"></span></div><div class="grp"><small>Kategori</small><span id="fc" style="display:contents"></span></div></div>
+  <div class="grid g4" id="list"></div>
+</main>
+<script src="js/data.js"></script><script src="js/common.js"></script><script src="js/nlu.js"></script>
+<script>
+requireLogin();renderNav("magaza");
+let kat="all",cat="all",term="";
+const cats=[...new Set(AVM.stores.map(s=>s.category))].sort((a,b)=>a.localeCompare(b,"tr"));
+function chips(el,items,get,set){el.innerHTML=items.map(([v,l])=>`<button class="chip ${get()===v?"on":""}" data-v="${v}">${l}</button>`).join("");el.querySelectorAll("button").forEach(b=>b.onclick=()=>{set(b.dataset.v);draw()})}
+function draw(){
+  chips(fk,[["all","Tümü"],["0","Kat 0"],["1","Kat 1"],["2","Kat 2"]],()=>kat,v=>kat=v);
+  chips(fc,[["all","Tümü"],...cats.slice(0,9).map(c=>[c,c])],()=>cat,v=>cat=v);
+  const t=NLU.fold(term);
+  const r=AVM.stores.filter(s=>(kat==="all"||s.floor===+kat)&&(cat==="all"||s.category===cat)&&(!t||NLU.fold(s.name+" "+s.category).includes(t)));
+  cnt.textContent=`${r.length} mağaza listeleniyor (toplam ${AVM.stores.length} mağaza, ${AVM.facilities.length} tesis)`;
+  list.innerHTML=r.map((s,i)=>{const [c,bg]=PALETTE[i%PALETTE.length],o=isOpen(s.hours);
+    return `<div class="card sc"><div class="top"><div class="logo2" style="background:${bg};color:${c}">${esc(initials(s.name))}</div><span class="badge ${o?"open":"closed"}">${o?"Açık":"Kapalı"}</span></div>
+    <div><b style="font-size:17px">${esc(s.name)}</b><div class="mut" style="font-size:13px;margin:3px 0">${esc(s.category)} · ${FLOOR_NAMES[s.floor].split(" ")[0]+" "+s.floor} · ${s.zone} bölgesi</div><div style="font-size:12px;font-weight:500;color:${o?"var(--ok)":"var(--red)"}">${s.hours.replace("-"," – ")}</div></div>
+    <a class="btn block" href="rota.html?to=${s.id}">Yol tarifi</a></div>`}).join("")||`<p class="mut">Sonuç yok.</p>`;
+}
+s.oninput=()=>{term=s.value;draw()};draw();
+</script></body></html>

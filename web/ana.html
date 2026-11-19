@@ -1,0 +1,19 @@
+<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AVM Rehber · Ana Sayfa</title><link rel="stylesheet" href="css/style.css"></head>
+<body><div id="nav"></div>
+<section class="hero"><span class="pill" id="info"></span>
+  <h1>Bugün ne arıyorsunuz?</h1><p>İstediğinizi kendi cümlelerinizle yazın. Mağaza, tesis veya ihtiyaç fark etmez.</p>
+  <form class="search" id="sf"><input id="q" autofocus placeholder="Örn: acıktım bi şeyler yiyelim, tuvalet nerede, spor ayakkabı bakıyorum…" aria-label="Arama"><button class="btn pri" type="submit">Sor</button></form>
+  <div class="quick"><span>Hızlı sorular:</span><span id="chips" style="display:contents"></span></div>
+</section>
+<main class="wrap"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:18px"><h2 style="margin:0;font-size:22px">Sık kullanılan yerler</h2><a href="magazalar.html" style="color:var(--pri);font-weight:600;font-size:14px">Tümü →</a></div>
+<div class="grid g4" id="places"></div></main>
+<script src="js/data.js"></script><script src="js/common.js"></script>
+<script>
+requireLogin();renderNav("ana");
+document.getElementById("info").textContent=`Merkez AVM  ·  3 kat  ·  ${AVM.stores.length} mağaza  ·  Çoğu mağaza 10:00–22:00`;
+const ask=q=>location.href="arama.html?q="+encodeURIComponent(q);
+document.getElementById("sf").onsubmit=e=>{e.preventDefault();const v=q.value.trim();if(v)ask(v)};
+["Acıktım","Tuvalet nerede","Otopark nerede","Çocuğuma kıyafet bakıyorum","AVM kaçta kapanıyor"].forEach(s=>{const b=document.createElement("button");b.className="chip";b.textContent=s;b.onclick=()=>ask(s);chips.appendChild(b)});
+const P=[["Yemek & Kafe","Y","#f59e0b","#fef3c7","Kat 2","acıktım bi şeyler yiyelim"],["Tuvalet","WC","#3d4ddb","#eef0ff","Her katta","tuvalet nerede"],["Otopark","P","#0ea5e9","#e0f2fe","Kat 0","otopark nerede"],["Asansör","↕","#15803d","#dcfce7","Her katta","asansör nerede"],["ATM","₺","#7c3aed","#ede9fe","Kat 0 ve 1","atm nerede"],["Bebek bakım odası","B","#db2777","#fce7f3","Kat 1","bebek bakım odası nerede"],["Eczane","+","#b91c1c","#fee2e2","Kat 0","eczane nerede"],["Danışma","i","#0f172a","#e2e8f0","Kat 0","danışma nerede"]];
+places.innerHTML=P.map(([t,g,c,bg,s,q])=>`<div class="card place" tabindex="0" role="button" onclick="ask('${q}')" onkeydown="if(event.key==='Enter')ask('${q}')"><div class="ico" style="background:${bg};color:${c}">${g}</div><div><b>${t}</b><div class="mut" style="font-size:13px">${s}</div></div></div>`).join("");
+</script></body></html>

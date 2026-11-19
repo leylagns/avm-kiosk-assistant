@@ -1,0 +1,27 @@
+<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AVM Rehber · Giriş</title><link rel="stylesheet" href="css/style.css"></head>
+<body><div class="login">
+  <section class="brand">
+    <span class="c" style="width:360px;height:360px;right:-100px;top:-120px"></span><span class="c" style="width:300px;height:300px;left:-80px;bottom:-60px"></span><span class="c" style="width:160px;height:160px;right:0;bottom:140px"></span>
+    <div class="logo" style="color:#fff"><i style="background:#fff;color:var(--pri)">A</i>AVM Rehber</div>
+    <div><h2>AVM'de kaybolmayın,<br>sadece sorun.</h2><p>Doğal Türkçe ile "acıktım" ya da "tuvalet nerede" yazın. Rehber ne istediğinizi anlasın, size en kısa yolu çizsin.</p>
+      <ul><li>Doğal Türkçe anlayan küçük dil modeli</li><li>Kat haritasında en kısa rota</li><li>Yazım hatalarına dayanıklı arama</li></ul></div>
+    <small style="color:#b9c0ff">Bitirme projesi · Yapay Zeka ve Veri Mühendisliği Tasarımı</small>
+  </section>
+  <section class="formside">
+    <form id="f" class="card login-card" autocomplete="off">
+      <h1 style="font-size:28px">Tekrar hoş geldiniz</h1><p class="mut" style="margin:0 0 22px;font-size:14px">Hesabınızla giriş yapın veya misafir olarak devam edin.</p>
+      <div class="field"><label for="em">E-posta</label><input id="em" type="email" placeholder="ornek@eposta.com" required></div>
+      <div class="field"><label for="pw">Şifre</label><input id="pw" type="password" placeholder="••••••••" required minlength="4"></div>
+      <button class="btn pri block" type="submit">Giriş Yap</button>
+      <div class="or">veya</div>
+      <button class="btn block" type="button" id="guest">Misafir olarak devam et</button>
+      <p class="mut" style="font-size:12px;margin:18px 0 0">Demo sürüm: gerçek kimlik doğrulama Hafta 4'te (FastAPI + PostgreSQL) eklenecek, şimdilik her e-posta kabul edilir.</p>
+    </form>
+  </section></div>
+<script src="js/common.js"></script>
+<script>
+const go=u=>{store.set(KEY_USER,u);location.href="ana.html"};
+document.getElementById("f").addEventListener("submit",e=>{e.preventDefault();const n=document.getElementById("em").value.split("@")[0].replace(/[._-]+/g," ").replace(/\b\w/g,c=>c.toUpperCase());go({name:n||"Kullanıcı"})});
+document.getElementById("guest").onclick=()=>go({name:"Misafir"});
+if(getUser())document.querySelector("h1").textContent="Tekrar hoş geldiniz";
+</script></body></html>

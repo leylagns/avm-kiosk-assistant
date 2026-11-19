@@ -1,0 +1,45 @@
+<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AVM Rehber · Arama</title><link rel="stylesheet" href="css/style.css"></head>
+<body><div id="nav"></div>
+<main class="chat" id="chat" aria-live="polite"></main>
+<div class="inputbar"><form class="search" id="sf"><input id="q" autofocus placeholder="Başka bir şey sorun…" aria-label="Mesaj"><a class="btn" href="ana.html">Ana sayfa</a><button class="btn pri" type="submit">Gönder</button></form></div>
+<script src="js/data.js"></script><script src="js/common.js"></script><script src="js/nlu.js"></script><script src="js/route.js"></script>
+<script>
+requireLogin();renderNav("ana");
+const chat=document.getElementById("chat");
+const dist=d=>ROUTE.plan(d).meters;
+const placeText=x=>`${FLOOR_NAMES[x.floor]} · ${x.zone} bölgesi`;
+const examples=["acıktım bi şeyler yiyelim","tuvalet nerede","Kebap Sarayı kaçta kapanıyor","2. katta neler var"];
+const exChips=()=>`<div style="display:flex;gap:10px;flex-wrap:wrap">${examples.map(e=>`<button class="chip" onclick="ask(this.textContent)">${e}</button>`).join("")}</div>`;
+function storeCard(s,pri){const o=isOpen(s.hours);return `<div class="sug"><div style="display:flex;justify-content:space-between;align-items:center"><b>${esc(s.name)}</b><span class="badge ${o?"open":"closed"}">${o?"Açık":"Kapalı"}</span></div><span class="mut" style="font-size:13px">${esc(s.category)} · ${placeText(s)} · ${s.hours.replace("-","–")}</span><a class="btn ${pri?"pri":""} sm" href="rota.html?to=${s.id}">Yol tarifi</a></div>`}
+function facCard(f,pri){return `<div class="sug"><b>${TYPE_LABEL[f.type]||f.type}</b><span class="mut" style="font-size:13px">${placeText(f)}</span><a class="btn ${pri?"pri":""} sm" href="rota.html?to=${f.id}">Yol tarifi</a></div>`}
+const grid=(arr,fn)=>`<div class="grid g3">${arr.map((x,i)=>fn(x,i===0)).join("")}</div>`;
+function answer(r,q){
+  const val=r.entity_value;
+  switch(r.intent){
+  case"find_facility":{const l=AVM.facilities.filter(f=>f.type===val).sort((a,b)=>dist(a)-dist(b)).slice(0,3);return{title:`${r.label}: size en yakın yer${l.length>1?"ler":""} aşağıda.`,body:grid(l,facCard),status:"Cevaplandı"}}
+  case"find_store":{const s=storeById(val);return{title:`${s.name} ${FLOOR_NAMES[s.floor]}, ${s.zone} bölgesinde.`,body:grid([s],storeCard),status:"Cevaplandı"}}
+  case"opening_hours":{if(val){const s=storeById(val),o=isOpen(s.hours);return{title:`${s.name} her gün ${s.hours.replace("-","–")} arası açık. Şu an ${o?"açık":"kapalı"}.`,body:grid([s],storeCard),status:"Cevaplandı"}}return{title:"Çoğu mağaza her gün 10:00–22:00 arası açıktır; saatler mağazaya göre değişebilir. Belirli bir mağazayı sorabilirsiniz.",body:"",status:"Cevaplandı"}}
+  case"recommend_category":{const l=AVM.stores.filter(s=>s.category===val).sort((a,b)=>dist(a)-dist(b)).slice(0,3);return{title:`"${val}" için ${l.length} yer buldum, size en yakın olandan başlıyorum.`,body:grid(l,storeCard),status:"Cevaplandı"}}
+  case"floor_directory":{const f=+val,l=AVM.stores.filter(s=>s.floor===f),t=AVM.facilities.filter(x=>x.floor===f);return{title:`${FLOOR_NAMES[f]}: ${l.length} mağaza, ${t.length} tesis.`,body:`<div style="display:flex;gap:8px;flex-wrap:wrap">${l.map(s=>`<a class="chip" href="rota.html?to=${s.id}">${esc(s.name)}</a>`).join("")}${t.map(x=>`<a class="chip on" href="rota.html?to=${x.id}">${TYPE_LABEL[x.type]||x.type}</a>`).join("")}</div>`,status:"Cevaplandı"}}
+  case"greeting_help":return{title:"Merhaba! Mağaza, tesis, kategori ve kat sorabilirsiniz. Örneğin:",body:exChips(),status:"Cevaplandı"};
+  default:return{title:"Bu konuda yardımcı olamıyorum. Yalnızca AVM içi yönlendirme yapabilirim.",body:exChips(),status:"Kapsam dışı"};}
+}
+const nluBar=r=>`<div class="nlu">Anlaşılan <span class="tag">Niyet: <b>${r.intent}</b></span>${r.entity_type?`<span class="tag">Varlık: <b>${esc(r.label||r.entity_value)}</b></span>`:""}<span class="tag">Güven: <b>%${Math.round(r.confidence*100)}</b></span></div>`;
+function ask(q){
+  q=q.trim();if(!q)return;history.replaceState(null,"","arama.html?q="+encodeURIComponent(q));
+  const r=NLU.parse(q);
+  const u=document.createElement("div");u.className="msg-u";u.textContent=q;chat.appendChild(u);
+  const a=document.createElement("div");a.className="msg-a";let html,status;
+  if(r.entity_type&&r.entity_type!=="floor"&&r.confidence<0.7){
+    const alts=[{label:r.label,value:r.entity_value},...NLU.alternatives(r,q).map(c=>({label:c.label,value:c.value}))];
+    status="Onay istendi";
+    html=`<h3>Şunu mu demek istediniz? <span class="badge warn" style="margin-left:8px">Güven %${Math.round(r.confidence*100)} · yazım hatası düzeltildi</span></h3><div style="display:flex;gap:10px;flex-wrap:wrap">${alts.map((x,i)=>`<button class="chip ${i?"":"on"}" data-q="${esc(x.label)} nerede">${esc(x.label)}${i?"":" nerede?"}</button>`).join("")}</div>`;
+  }else{const ans=answer(r,q);status=ans.status;html=`<h3>${ans.title}</h3>${r.intent!=="greeting_help"?nluBar(r):""}${ans.body}`}
+  a.innerHTML=`<div class="av">A</div><div class="card">${html}</div>`;chat.appendChild(a);
+  a.querySelectorAll("[data-q]").forEach(b=>b.onclick=()=>ask(b.dataset.q));
+  addLog({t:Date.now(),q,intent:r.intent,entity:r.label||r.entity_value||"",conf:r.confidence,status});
+  window.scrollTo({top:document.body.scrollHeight,behavior:"smooth"});
+}
+document.getElementById("sf").onsubmit=e=>{e.preventDefault();ask(q.value);q.value=""};
+const p=new URLSearchParams(location.search).get("q");if(p)ask(p);else{chat.innerHTML=`<div class="msg-a"><div class="av">A</div><div class="card"><h3>Merhaba! Ne arıyorsunuz?</h3>${exChips()}</div></div>`}
+</script></body></html>

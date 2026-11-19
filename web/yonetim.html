@@ -1,0 +1,28 @@
+<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AVM Rehber · Yönetim</title><link rel="stylesheet" href="css/style.css"></head>
+<body><div id="nav"></div>
+<div class="admin"><aside class="sidenav"><a class="on">Genel bakış</a><a>Sorgu kayıtları</a><a>Model sonuçları</a><a>Mağaza yönetimi</a><a>Kullanıcılar</a><a>Ayarlar</a></aside>
+<main class="wrap" style="max-width:none;width:100%;display:grid;gap:22px;align-content:start">
+  <div style="display:flex;justify-content:space-between;align-items:center"><div><h1 style="font-size:28px">Genel bakış</h1><span class="mut" style="font-size:13px" id="sub"></span></div><button class="btn sm" id="clr">Kayıtları temizle</button></div>
+  <div class="grid g4" id="kpi"></div>
+  <div class="grid g2"><div class="card"><h3 style="margin:0 0 8px">Niyet dağılımı</h3><div id="dist"></div></div>
+  <div class="card"><div style="display:flex;justify-content:space-between"><h3 style="margin:0 0 8px">Model karşılaştırma</h3><span class="mut" style="font-size:12px">Makro-F1 · test_llm</span></div>
+    <div class="row">E0 Kural tabanlı<b>0,866</b></div><div class="row">E1 TF-IDF + LR<b>0,717</b></div><div class="row">E2a DistilBERTurk<b>0,770</b></div><div class="row best">E2b BERTurk<b>0,882</b></div>
+    <small class="mut">Hafta 3, 2. koşu (docs/week3/comparison.md). Bu sayfadaki sorgu istatistikleri tarayıcı demosunun kendi kayıtlarıdır.</small></div></div>
+  <div class="card"><h3 style="margin:0 0 6px">Son sorgular</h3><table><thead><tr><th>SORGU</th><th>NİYET</th><th>VARLIK</th><th>GÜVEN</th><th>DURUM</th></tr></thead><tbody id="rows"></tbody></table></div>
+</main></div>
+<script src="js/data.js"></script><script src="js/common.js"></script>
+<script>
+requireLogin();renderNav("yonetim");
+const SAMPLE=[["acıktım bi şeyler yiyelim","recommend_category","yemek",.82,"Cevaplandı"],["tuvlet nerde","find_facility","Tuvalet",.56,"Onay istendi"],["Kebap Sarayı kaçta kapanıyor","opening_hours","Kebap Sarayı",.95,"Cevaplandı"],["bana fıkra anlat","out_of_scope","",.6,"Kapsam dışı"]].map((x,i)=>({t:Date.now()-i*60000,q:x[0],intent:x[1],entity:x[2],conf:x[3],status:x[4]}));
+function draw(){
+  let log=getLog(),demo=!log.length;if(demo)log=SAMPLE;
+  sub.textContent=demo?"Henüz sorgu yok, örnek veri gösteriliyor. Arama sayfasında soru sorunca burası dolar.":`${log.length} kayıtlı sorgu (bu tarayıcıda)`;
+  const n=log.length,avg=log.reduce((a,l)=>a+l.conf,0)/n,pct=k=>Math.round(100*log.filter(l=>l.status===k).length/n);
+  kpi.innerHTML=[["Toplam sorgu",n,"Bu tarayıcıda"],["Ortalama güven","%"+Math.round(avg*100),"Demo NLU"],["Belirsiz sorgu","%"+pct("Onay istendi"),'"Şunu mu demek istediniz?"'],["Kapsam dışı","%"+pct("Kapsam dışı"),"Yönlendirme dışı sorular"]].map(([k,v,s])=>`<div class="card kpi"><span class="mut" style="font-size:13px;font-weight:500">${k}</span><b>${v}</b><small class="mut">${s}</small></div>`).join("");
+  const c={};log.forEach(l=>c[l.intent]=(c[l.intent]||0)+1);const max=Math.max(...Object.values(c));
+  dist.innerHTML=Object.entries(c).sort((a,b)=>b[1]-a[1]).map(([k,v])=>`<div class="bar"><span>${k}</span><div class="t"><i style="width:${100*v/max}%"></i></div><b>${v}</b></div>`).join("");
+  const badge={"Cevaplandı":"open","Onay istendi":"warn","Kapsam dışı":"gray"};
+  rows.innerHTML=log.slice(0,8).map(l=>`<tr><td>${esc(l.q)}</td><td>${esc(l.intent)}</td><td>${esc(l.entity||"—")}</td><td>%${Math.round(l.conf*100)}</td><td><span class="badge ${badge[l.status]||"gray"}">${esc(l.status)}</span></td></tr>`).join("");
+}
+clr.onclick=()=>{store.set(KEY_LOG,[]);draw()};draw();
+</script></body></html>

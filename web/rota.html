@@ -1,0 +1,34 @@
+<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AVM Rehber · Rota</title><link rel="stylesheet" href="css/style.css"></head>
+<body><div id="nav"></div>
+<div class="rota"><aside class="side" id="side"></aside>
+<section class="mapp"><div class="tabs"><div id="tabs" style="display:flex;gap:10px"></div><span class="mut" id="hint" style="font-size:13px"></span></div>
+<div class="map"><div class="mall"><div class="zones" id="zones"></div><div class="corr" id="corr"></div>
+<div class="legend"><span><i style="background:var(--acc)"></i>Rota</span><span><i style="background:var(--pri)"></i>Hedef</span><span><i style="background:#e0ecff"></i>Tesis</span></div></div></div></section></div>
+<script src="js/data.js"></script><script src="js/common.js"></script><script src="js/route.js"></script>
+<script>
+requireLogin();renderNav("ana");
+const id=new URLSearchParams(location.search).get("to")||"S17";
+const s=storeById(id),f=facById(id);
+const dest=s?{name:s.name,floor:s.floor,zone:s.zone,sub:`${s.category} · ${s.id}`}:f?{name:TYPE_LABEL[f.type]||f.type,floor:f.floor,zone:f.zone,sub:f.desc}:{name:"Kebap Sarayı",floor:2,zone:"C",sub:"yemek"};
+const P=ROUTE.plan(dest);let cur=KIOSK.floor;
+side.innerHTML=`<a class="btn sm" href="javascript:history.length>1?history.back():location.href='ana.html'" style="align-self:flex-start">← Aramaya dön</a>
+<div><h1 style="font-size:30px">${esc(dest.name)}</h1><span class="mut" style="font-size:14px">${FLOOR_NAMES[dest.floor]} · ${dest.zone} bölgesi · ${esc(dest.sub)}</span></div>
+<div class="sum"><div><small>Süre</small><b>${P.minutes} dk</b></div><div><small>Mesafe</small><b>${P.meters} m</b></div><div><small>Kat</small><b>${KIOSK.floor} → ${dest.floor}</b></div></div>
+<ol class="steps">${P.steps.map((x,i)=>`<li><span class="n">${i+1}</span><div><b>${esc(x.t)}</b><small>${esc(x.s)}</small></div></li>`).join("")}</ol>
+<div style="flex:1"></div><button class="btn block" onclick="alert('Demo: rota telefona QR kod ile gönderilecek (Hafta 7).')">Telefonuma gönder</button><a class="btn pri block" href="ana.html">Yeni arama yap</a>`;
+function draw(){
+  tabs.innerHTML=[0,1,2].map(k=>`<button class="chip ${k===cur?"on":""}" onclick="cur=${k};draw()">Kat ${k}${P.floors.includes(k)?" ●":""}</button>`).join("");
+  hint.textContent=P.floors.length>1?`Rota ${P.floors.length} kata bölünür: ${P.floors.map(k=>"Kat "+k).join(" → ")}`:"Rota tek katta";
+  const seg=P.bySeg[cur]||[];
+  zones.innerHTML=["A","B","C"].map(z=>{const items=[...AVM.stores.filter(x=>x.floor===cur&&x.zone===z).map(x=>`<div class="st ${x.id===id?"dest":""}">${esc(x.name)}</div>`),...AVM.facilities.filter(x=>x.floor===cur&&x.zone===z).map(x=>`<div class="st fac ${x.id===id?"dest":""}">${TYPE_LABEL[x.type]||x.type}</div>`)];
+    return `<div class="zone ${seg.includes(z)?"hot":""}"><h4>BÖLGE ${z}</h4>${items.join("")}</div>`}).join("");
+  const X={A:16.7,B:50,C:83.3};let h="";
+  if(seg.length>1){const pts=seg.map(z=>`${X[z]},35`).join(" ");h+=`<svg viewBox="0 0 100 70" preserveAspectRatio="none"><polyline points="${pts}" fill="none" stroke="#f59e0b" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke"/></svg>`}
+  const m=(z,t,c,title)=>`<div title="${title}" style="position:absolute;left:calc(${X[z]}% - 17px);top:18px;width:34px;height:34px;border-radius:50%;background:${c};color:#fff;border:3px solid #fff;display:grid;place-items:center;font-weight:700;font-size:14px">${t}</div>`;
+  if(P.floors.length>1&&seg.includes("B"))h+=m("B","↕","#3d4ddb","Asansör");
+  if(cur===KIOSK.floor)h+=m(KIOSK.zone,"●","#0f172a","Buradasınız");
+  if(cur===dest.floor)h+=m(dest.zone,"★","#f59e0b","Hedef");
+  corr.innerHTML=h||`<span class="mut" style="position:absolute;inset:0;display:grid;place-items:center;font-size:13px">Bu katta rota yok</span>`;
+}
+draw();
+</script></body></html>
