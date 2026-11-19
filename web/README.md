@@ -26,3 +26,7 @@ python -m http.server 8000      # sonra http://localhost:8000 adresini aç
 - **Gerçek:** mağaza/tesis verisi (`data/avm/*.csv` → `js/data.js`, `python scripts/build_web_data.py`), Dijkstra ile kat grafında en kısa rota (`js/route.js`), açık/kapalı hesabı, sorgu kaydı (tarayıcı `localStorage`).
 - **Demo:** `js/nlu.js` tarayıcıda çalışan kural + bulanık eşleşme tabanlı küçük NLU'dur. Çıktı biçimi API sözleşmesiyle aynıdır; Hafta 6'da BERTurk modeli FastAPI üzerinden bu yerin yerine geçecek (Hafta 4: backend iskeleti).
 - **Demo:** giriş şu an her e-postayı kabul eder; gerçek kimlik doğrulama Hafta 4'te gelecek. Rota mesafeleri örnek değerlerdir.
+
+## Canlı adres
+
+https://leylagns.github.io/avm-kiosk-assistant/
